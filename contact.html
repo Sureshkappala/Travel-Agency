@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Wanderlust Travel Agency - Inquire about custom vacations, package bookings, or 24/7 global travel support.">
+  <title>Contact Us & FAQ | Wanderlust Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Stackly Travel Home"><img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="144" height="57"></a>
+
+            <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="tour-details.html" class="nav-link">Tours</a>
+        <a href="hotels.html" class="nav-link">Hotels</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="user-dashboard.html#wishlist" class="nav-action-btn" title="Saved Trips" aria-label="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span class="nav-action-badge nav-wishlist-count" style="display: none;">0</span>
+        </a>
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Plan Your Trip</a>
+        <button class="hamburger-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+    <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-top">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="logo" aria-label="Stackly Travel Home">
+          <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="130" height="51">
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close navigation drawer" type="button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home <span>→</span></a>
+        <a href="about.html">About Us <span>→</span></a>
+        <a href="destinations.html">Destinations <span>→</span></a>
+        <a href="packages.html">Packages <span>→</span></a>
+        <a href="tour-details.html">Tours <span>→</span></a>
+        <a href="hotels.html">Hotels <span>→</span></a>
+        <a href="contact.html" class="active">Contact <span>→</span></a>
+        <a href="user-dashboard.html">Customer Dashboard <span>→</span></a>
+        <a href="admin-dashboard.html">Agency Admin <span>→</span></a>
+      </nav>
+    </div>
+        <div class="mobile-nav-footer">
+      <a href="login.html" class="btn btn-outline" style="width: 100%;">Account Login</a>
+      <a href="booking.html" class="btn btn-primary" style="width: 100%;">Plan Your Trip</a>
+      
+      <!-- Quick Mobile Drawer Contact Info -->
+      <div class="mobile-drawer-contact-info">
+        <a href="tel:+18007822559" class="mobile-contact-item">
+          <span>📞</span> <span>+1 (800) 782-2559 <strong>(24/7 VIP)</strong></span>
+        </a>
+        <a href="mailto:concierge@stacklytravel.com" class="mobile-contact-item">
+          <span>✉️</span> <span>concierge@stacklytravel.com</span>
+        </a>
+        <div class="mobile-contact-item">
+          <span>📍</span> <span>Stackly HQ, 120 Travel Way, NYC</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Contact Us</span>
+      </div>
+      <h1>Get In Touch With Our Curators</h1>
+      <p class="text-muted" style="max-width: 600px; margin-top: 6px;">Have questions about our destinations or need a completely custom itinerary? We are here to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Form -->
+        <div class="bg-white" style="border-radius: var(--radius-xl); padding: 40px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+          <h3 style="margin-bottom: 8px;">Send Us an Inquiry</h3>
+          <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 24px;">Fill out the form below and one of our dedicated destination planners will respond within 24 hours.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Your Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Marcus Aurelius" pattern="^[a-zA-Z\s\.\'\-]+$" title="Please enter a valid name (letters only, no numbers)." required>
+                <span class="form-error">Please enter a valid full name (letters only, no numbers).</span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. marcus@example.com" required>
+                <span class="form-error">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone">Mobile Phone</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="+1 (555) 000-0000" pattern="^[\d\+\-\(\)\s]{7,20}$" title="Please enter a valid phone number (digits only, no letters).">
+                <span class="form-error">Please enter a valid phone number (digits only, no letters).</span>
+              </div>
+              <div class="form-group">
+                <label for="contact-dest">Target Destination</label>
+                <select id="contact-dest" class="form-control">
+                  <option value="Bali">Bali, Indonesia</option>
+                  <option value="Dubai">Dubai, UAE</option>
+                  <option value="Maldives">Maldives</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="Paris">Paris, France</option>
+                  <option value="Other">Other / Multiple Stops</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Inquiry Subject *</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Honeymoon Package in Bali for June 2026" required>
+              <span class="form-error">Please specify a subject.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Your Travel Message / Preferences *</label>
+              <textarea id="contact-message" class="form-control" rows="4" placeholder="Tell us about your travel dates, preferred pace, special requirements, or questions..." required></textarea>
+              <span class="form-error">Please provide a message.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Submit Message →</button>
+            <div id="contact-success-msg" style="display: none; margin-top: 14px; padding: 12px; background: var(--tropical-light); color: var(--tropical-green); border-radius: var(--radius-md); font-weight: 600; text-align: center;">
+              ✓ Thank you! Your message has been received. A travel curator will contact you shortly.
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info-cards">
+          <div class="info-card-item">
+            <div class="info-card-icon">📍</div>
+            <div>
+              <h4>New York Flagship Office</h4>
+              <p class="text-muted" style="font-size: 0.9rem; margin-top: 4px;">742 Evergreen Blvd, Suite 400<br>New York, NY 10001, USA</p>
+            </div>
+          </div>
+
+          <div class="info-card-item">
+            <div class="info-card-icon">📞</div>
+            <div>
+              <h4>Direct Phone & WhatsApp</h4>
+              <p class="text-muted" style="font-size: 0.9rem; margin-top: 4px;">Toll-Free: +1 (800) 555-WNDR<br>WhatsApp Concierge: +1 (212) 555-0199</p>
+            </div>
+          </div>
+
+          <div class="info-card-item">
+            <div class="info-card-icon">✉️</div>
+            <div>
+              <h4>Direct Email Support</h4>
+              <p class="text-muted" style="font-size: 0.9rem; margin-top: 4px;">General: concierge@wanderlustagency.com<br>Press: media@wanderlustagency.com</p>
+            </div>
+          </div>
+
+          <div class="info-card-item">
+            <div class="info-card-icon">⏱</div>
+            <div>
+              <h4>Operating Hours</h4>
+              <p class="text-muted" style="font-size: 0.9rem; margin-top: 4px;">Monday – Saturday: 8:00 AM – 8:00 PM EST<br>Emergency Traveler Hotline: 24/7 / 365</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STACKLY HEADQUARTERS GOOGLE MAPS LOCATION
+       ========================================================================== -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-coral">Visit Our Studio</span>
+        <h2>Stackly Global Headquarters</h2>
+        <p class="section-desc">Experience our experiential travel planning lounge in New York City. Meet in person with our senior expedition designers.</p>
+      </div>
+
+      <!-- Interactive Google Maps Frame with Floating Card -->
+      <div class="map-embed-container">
+        <div class="map-iframe-wrap">
+          <iframe 
+            src="https://maps.google.com/maps?q=742+Evergreen+Blvd,+New+York,+NY+10001&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            title="Stackly Travel Global Headquarters Location Map"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="map-info-floating-card">
+          <span class="badge badge-coral" style="margin-bottom: 8px; width: fit-content;">Flagship Headquarters</span>
+          <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Stackly Travel HQ</h3>
+          <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 14px; line-height: 1.5;">
+            📍 <strong>742 Evergreen Blvd, Suite 400</strong><br>
+            New York, NY 10001, United States
+          </p>
+
+          <div style="font-size: 0.82rem; color: var(--body-text); display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; padding-top: 10px; border-top: 1px solid var(--border-light);">
+            <div>🚇 <strong>Transit:</strong> Penn Station (1/2/3/A/C/E) & Herald Sq (B/D/F/M/N/Q/R/W)</div>
+            <div>🅿️ <strong>Parking:</strong> Complimentary reserved guest valet parking</div>
+            <div>⏰ <strong>Hours:</strong> Mon – Sat: 8:00 AM – 8:00 PM EST</div>
+          </div>
+
+          <a href="https://maps.google.com/?q=742+Evergreen+Blvd+New+York+NY+10001" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; text-align: center; display: block;">
+            Open in Google Maps ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordion) -->
+  <section class="section-spacing bg-white" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-blue">Help Center</span>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-desc">Got questions about booking, package inclusions, or trip customizations? Find quick answers below.</p>
+      </div>
+
+      <div class="faq-container">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span>How do I book a trip?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Booking is simple! Explore our curated packages or destinations, select your desired dates and traveler count, and click "Book Now." You will receive an instant digital reservation reference and a dedicated concierge will confirm flight preferences within 2 hours.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I customize a package?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Absolutely. Every itinerary is fully customizable. You can adjust the number of days, upgrade to oceanfront villas, add private excursions, or combine multiple destinations by chatting with your assigned travel specialist.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I change my travel dates?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes! We offer flexible travel protection. You may reschedule your journey up to 14 days before departure with zero change penalty fees, subject to seasonal resort rate adjustments.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is included in a package?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Our standard packages include handpicked 4-star or 5-star resort stays, private chauffeured transfers, licensed English-speaking local tour guides, entrance passes to all scheduled attractions, and daily gourmet breakfasts.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you provide hotel bookings?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes, our Hotels page lets you reserve standalone luxury stays, private villas, and boutique lodges worldwide with exclusive VIP perks like free room upgrades, breakfast, and resort spa credits.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I track my booking?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            You can log into your Customer Dashboard anytime to view real-time countdown timers, downloadable flight vouchers, daily excursion itineraries, and direct contact info for your driver.
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I cancel a booking?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes. Full 100% refunds are provided for cancellations made at least 7 days prior to departure for standard bookings. For customized luxury charters, our flexible travel insurance provides comprehensive coverage.
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I contact travel support?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            Our 24/7 global support team is accessible via WhatsApp, phone, email, and live portal messaging. When traveling, you also receive the direct mobile phone number of your local expedition manager.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- ==========================================================================
+       PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+    <!-- NEW SECTION A: GLOBAL EMERGENCY HOTLINE -->
+  <section class="section-spacing bg-white">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #071E2D, #0B2545); border-radius: var(--radius-xl); padding: 40px; color: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+        <div>
+          <span class="badge badge-coral" style="margin-bottom: 10px;">Emergency Response</span>
+          <h2 style="color: var(--white); font-size: 1.8rem; margin-bottom: 10px;">24/7 Traveler Assistance Hotline</h2>
+          <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+            If you are currently traveling and require immediate flight rerouting, medical evacuation coordination, or on-the-ground support, our crisis team is active 24/7.
+          </p>
+        </div>
+        <div style="background: rgba(255,255,255,0.08); padding: 24px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15);">
+          <strong style="color: var(--white); display: block; font-size: 1.1rem; margin-bottom: 6px;">📞 Emergency Operations Desk</strong>
+          <p style="color: #4DE0AD; font-size: 1.25rem; font-weight: 800; margin-bottom: 6px;">+1 (800) 555-9911</p>
+          <span style="font-size: 0.85rem; color: #94A3B8;">Direct satellite dispatch for active travelers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION B: CORPORATE & MICE RETREATS -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-green">B2B Partnerships</span>
+        <h2>Corporate Travel & Executive Retreats</h2>
+        <p class="section-desc">We deliver turnkey leadership summits, incentive trips, and conference logistics worldwide.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        <div style="background: var(--white); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <span style="font-size: 2rem;">🏢</span>
+          <h4 style="margin: 10px 0 6px;">Executive Retreats</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Private mountain lodges and seaside estates equipped with high-speed satellite Wi-Fi and conference facilities.</p>
+        </div>
+        <div style="background: var(--white); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <span style="font-size: 2rem;">🏆</span>
+          <h4 style="margin: 10px 0 6px;">Incentive Group Journeys</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Rewarding top performers with once-in-a-lifetime private safari flights and yachting adventures.</p>
+        </div>
+        <div style="background: var(--white); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <span style="font-size: 2rem;">📊</span>
+          <h4 style="margin: 10px 0 6px;">Full Expense Accounting</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Consolidated VAT invoices, corporate credit billing, and comprehensive travel management reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pre-footer-cta">
+    <div class="container">
+      <h2>Join thousands of proactive travelers and families discovering the world with clean, modern travel clarity.</h2>
+      <div class="pre-footer-buttons">
+        <a href="destinations.html" class="btn-pill-mint">Start Exploring Free</a>
+        <a href="booking.html" class="btn-pill-dark">Create a Custom Trip</a>
+        <a href="packages.html" class="btn-pill-dark">View Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STACKLY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px;" aria-label="Stackly Travel Home">
+            <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="144" height="57">
+          </a>
+          <p>Mobilizing intelligent travel discovery, curated destination escapes, bespoke luxury packages, and personalized trip planning for modern life.</p>
+                    <div class="footer-social-row">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="X / Twitter">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="destinations.html">Destinations Catalog</a>
+            <a href="packages.html">Travel Packages</a>
+            <a href="hotels.html">Hotels & Resorts</a>
+            <a href="tour-details.html">Tour Details</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms & Agreements</a>
+            <a href="404.html">Security & Insurance</a>
+            <a href="destination-details.html">Destination Guides</a>
+            <a href="contact.html#faq">FAQ & Help Center</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-desc">Get quarterly travel updates, smart expedition alerts, and curated destination reports.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Travel updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved. Designed for travel clarity and unforgettable global journeys.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Contact form specific script
+    document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name');
+      const email = document.getElementById('contact-email');
+      const sub = document.getElementById('contact-subject');
+      const msg = document.getElementById('contact-message');
+      let valid = true;
+
+      [name, email, sub, msg].forEach(el => {
+        if (!el.value.trim()) {
+          el.closest('.form-group')?.classList.add('has-error');
+          valid = false;
+        } else {
+          el.closest('.form-group')?.classList.remove('has-error');
+        }
+      });
+
+      if (valid) {
+        document.getElementById('contact-success-msg').style.display = 'block';
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

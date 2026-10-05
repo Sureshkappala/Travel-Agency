@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your dream vacation with Wanderlust Travel Agency. Secure, customizable travel reservations with instant confirmation.">
+  <title>Reserve Your Journey | Wanderlust Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Stackly Travel Home"><img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="144" height="57"></a>
+
+            <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="tour-details.html" class="nav-link">Tours</a>
+        <a href="hotels.html" class="nav-link">Hotels</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="user-dashboard.html#wishlist" class="nav-action-btn" title="Saved Trips" aria-label="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span class="nav-action-badge nav-wishlist-count" style="display: none;">0</span>
+        </a>
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Plan Your Trip</a>
+        <button class="hamburger-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+    <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-top">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="logo" aria-label="Stackly Travel Home">
+          <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="130" height="51">
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close navigation drawer" type="button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home <span>→</span></a>
+        <a href="about.html">About Us <span>→</span></a>
+        <a href="destinations.html">Destinations <span>→</span></a>
+        <a href="packages.html">Packages <span>→</span></a>
+        <a href="tour-details.html">Tours <span>→</span></a>
+        <a href="hotels.html">Hotels <span>→</span></a>
+        <a href="contact.html">Contact <span>→</span></a>
+        <a href="user-dashboard.html">Customer Dashboard <span>→</span></a>
+        <a href="admin-dashboard.html">Agency Admin <span>→</span></a>
+      </nav>
+    </div>
+        <div class="mobile-nav-footer">
+      <a href="login.html" class="btn btn-outline" style="width: 100%;">Account Login</a>
+      <a href="booking.html" class="btn btn-primary" style="width: 100%;">Plan Your Trip</a>
+      
+      <!-- Quick Mobile Drawer Contact Info -->
+      <div class="mobile-drawer-contact-info">
+        <a href="tel:+18007822559" class="mobile-contact-item">
+          <span>📞</span> <span>+1 (800) 782-2559 <strong>(24/7 VIP)</strong></span>
+        </a>
+        <a href="mailto:concierge@stacklytravel.com" class="mobile-contact-item">
+          <span>✉️</span> <span>concierge@stacklytravel.com</span>
+        </a>
+        <div class="mobile-contact-item">
+          <span>📍</span> <span>Stackly HQ, 120 Travel Way, NYC</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Trip Reservation</span>
+      </div>
+      <h1>Complete Your Booking</h1>
+      <p class="text-muted" style="max-width: 600px; margin-top: 6px;">Provide your travel details below. Your reservation is protected by our flexible cancellation policy.</p>
+    </div>
+  </section>
+
+  <!-- Main Booking Form & Summary -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="booking-layout-grid">
+        
+        <!-- Left: Booking Form -->
+        <div class="booking-form-card">
+          <h3 style="margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border-light);">Traveler & Trip Details</h3>
+
+          <form id="trip-booking-form" novalidate>
+            
+            <!-- Full Name & Email -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-name">Primary Traveler Full Name *</label>
+                <input type="text" id="booking-name" name="name" class="form-control" placeholder="e.g. Eleanor Vance" required>
+                <span class="form-error">Please enter your full name (minimum 3 characters).</span>
+              </div>
+              <div class="form-group">
+                <label for="booking-email">Email Address *</label>
+                <input type="email" id="booking-email" name="email" class="form-control" placeholder="e.g. eleanor@example.com" required>
+                <span class="form-error">Please provide a valid email address for confirmation.</span>
+              </div>
+            </div>
+
+            <!-- Phone & Destination -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-phone">Mobile Phone (with country code) *</label>
+                <input type="tel" id="booking-phone" name="phone" class="form-control" placeholder="+1 (555) 019-2834" required>
+                <span class="form-error">Please enter a valid phone number.</span>
+              </div>
+              <div class="form-group">
+                <label for="booking-destination">Travel Destination *</label>
+                <select id="booking-destination" name="destination" class="form-control">
+                  <option value="Bali, Indonesia" selected>Bali, Indonesia</option>
+                  <option value="Dubai, UAE">Dubai, UAE</option>
+                  <option value="Paris, France">Paris, France</option>
+                  <option value="Maldives">Maldives Islands</option>
+                  <option value="Switzerland">Switzerland (Alps)</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Thailand">Thailand (Phuket & Bangkok)</option>
+                  <option value="Goa, India">Goa, India</option>
+                  <option value="Kyoto, Japan">Kyoto, Japan</option>
+                  <option value="Santorini, Greece">Santorini, Greece</option>
+                  <option value="Cappadocia, Turkey">Cappadocia, Turkey</option>
+                  <option value="Rome, Italy">Rome, Italy</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Package Selection & Travelers Count -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-package">Package Selection *</label>
+                <select id="booking-package" name="package" class="form-control">
+                  <option value="bali-escape" selected>Bali Tropical Escape ($890/person)</option>
+                  <option value="dubai-explorer">Dubai Desert & City Lights ($1,250/person)</option>
+                  <option value="maldives-getaway">Maldives Overwater Sanctuary ($1,950/person)</option>
+                  <option value="swiss-adventure">Swiss Alps Panorama Tour ($2,450/person)</option>
+                  <option value="thailand-discovery">Thailand Island & Temple Trail ($780/person)</option>
+                  <option value="safari-kenya">Maasai Mara Big Five Safari ($2,100/person)</option>
+                  <option value="amalfi-coast">Amalfi & Capri Coastal Bliss ($1,850/person)</option>
+                  <option value="iceland-aurora">Iceland Aurora & Glaciers ($2,200/person)</option>
+                  <option value="santorini-romance">Santorini Caldera & Sunset Cruise ($1,650/person)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="booking-travelers">Number of Travelers *</label>
+                <select id="booking-travelers" name="travelers" class="form-control">
+                  <option value="1">1 Person (Solo)</option>
+                  <option value="2" selected>2 Persons (Couple)</option>
+                  <option value="3">3 Persons</option>
+                  <option value="4">4 Persons (Family)</option>
+                  <option value="5">5 Persons</option>
+                  <option value="6">6+ Persons (Group)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Dates -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-date">Departure Date *</label>
+                <input type="date" id="booking-date" name="departureDate" class="form-control" required>
+                <span class="form-error">Please select a departure date.</span>
+              </div>
+              <div class="form-group">
+                <label for="booking-return-date">Return Date *</label>
+                <input type="date" id="booking-return-date" name="returnDate" class="form-control" required>
+                <span class="form-error">Return date must be later than departure date.</span>
+              </div>
+            </div>
+
+            <!-- Trip Type Radio Options -->
+            <div class="form-group">
+              <label style="margin-bottom: 8px;">Trip Style / Category</label>
+              <div class="trip-type-cards">
+                <div>
+                  <input type="radio" id="type-solo" name="tripType" value="Solo" class="trip-type-input">
+                  <label for="type-solo" class="trip-type-label"><span>🎒</span> Solo</label>
+                </div>
+                <div>
+                  <input type="radio" id="type-couple" name="tripType" value="Couple" class="trip-type-input" checked>
+                  <label for="type-couple" class="trip-type-label"><span>👫</span> Couple</label>
+                </div>
+                <div>
+                  <input type="radio" id="type-family" name="tripType" value="Family" class="trip-type-input">
+                  <label for="type-family" class="trip-type-label"><span>👨‍👩‍👦</span> Family</label>
+                </div>
+                <div>
+                  <input type="radio" id="type-group" name="tripType" value="Group" class="trip-type-input">
+                  <label for="type-group" class="trip-type-label"><span>👥</span> Group</label>
+                </div>
+                <div>
+                  <input type="radio" id="type-honeymoon" name="tripType" value="Honeymoon" class="trip-type-input">
+                  <label for="type-honeymoon" class="trip-type-label"><span>💍</span> Honeymoon</label>
+                </div>
+                <div>
+                  <input type="radio" id="type-adventure" name="tripType" value="Adventure" class="trip-type-input">
+                  <label for="type-adventure" class="trip-type-label"><span>🧗</span> Adventure</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="form-group">
+              <label for="booking-notes">Special Requests / Dietary Restrictions (Optional)</label>
+              <textarea id="booking-notes" name="notes" class="form-control" rows="3" placeholder="e.g. Vegetarian meals requested, anniversary cake surprise, quiet high floor villa..."></textarea>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-light);">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Confirm & Complete Reservation →</button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right: Live Booking Summary -->
+        <aside class="booking-summary-card">
+          <h3 style="margin-bottom: 16px;">Booking Summary</h3>
+          <img class="summary-thumb" src="assets/images/dest-bali.webp" alt="Selected Destination" width="400" height="225">
+
+          <div class="summary-item-row">
+            <span class="text-muted">Package:</span>
+            <strong id="summary-pkg-name">Bali Tropical Escape</strong>
+          </div>
+          <div class="summary-item-row">
+            <span class="text-muted">Travelers:</span>
+            <strong id="summary-travelers">2 Travelers</strong>
+          </div>
+          <div class="summary-item-row">
+            <span class="text-muted">Base Subtotal:</span>
+            <span id="summary-subtotal">$1,780</span>
+          </div>
+          <div class="summary-item-row">
+            <span class="text-muted">Taxes & Resort Fees (12%):</span>
+            <span id="summary-taxes">$214</span>
+          </div>
+          <div class="summary-item-row total-row">
+            <span>Estimated Total:</span>
+            <span id="summary-total" class="text-coral">$1,994</span>
+          </div>
+
+          <div style="margin-top: 20px; padding: 14px; background: var(--sand-warm); border-radius: var(--radius-md); font-size: 0.82rem; color: var(--body-text);">
+            🔒 <strong>Wanderlust Guarantee:</strong> Instant digital confirmation and dedicated personal concierge assignment within 2 business hours.
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- ==========================================================================
+       PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+    <!-- NEW SECTION A: WORRY-FREE GUARANTEE -->
+  <section class="section-spacing bg-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-green">Our Promise</span>
+        <h2>The Stackly 100% Worry-Free Booking Guarantee</h2>
+        <p class="section-desc">We protect your vacation investment with industry-leading flexibility and transparent policies.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <span style="font-size: 2rem;">🔄</span>
+          <h4 style="margin: 10px 0 6px;">Free Rescheduling</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Change your travel dates up to 14 days before departure with zero change penalty fees.</p>
+        </div>
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <span style="font-size: 2rem;">💰</span>
+          <h4 style="margin: 10px 0 6px;">Best Rate Match</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Find a lower verified public rate for the exact resort villa? We will match it plus add $50 credit.</p>
+        </div>
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <span style="font-size: 2rem;">🛡</span>
+          <h4 style="margin: 10px 0 6px;">24/7 Flight Monitoring</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Flight delayed or rescheduled? Your chauffeur automatically adjusts pickup times with zero extra charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION B: PAYMENT & DEPOSIT FAQ -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div style="background: var(--white); padding: 36px; border-radius: var(--radius-xl); border: 1px solid var(--border-color);">
+        <h3 style="margin-bottom: 14px;">💳 Payment Options & Deposit Schedules</h3>
+        <p class="text-muted" style="font-size: 0.92rem; margin-bottom: 20px;">Secure 256-bit encrypted checkout with flexible milestone payment plans.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          <div><strong>1. Reserve with 20% Deposit:</strong> Lock in your promotional package price today.</div>
+          <div><strong>2. Split Balance Over Time:</strong> Pay remaining balance in interest-free monthly installments.</div>
+          <div><strong>3. Final Balance 14 Days Prior:</strong> Complete your payment before takeoff.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pre-footer-cta">
+    <div class="container">
+      <h2>Join thousands of proactive travelers and families discovering the world with clean, modern travel clarity.</h2>
+      <div class="pre-footer-buttons">
+        <a href="destinations.html" class="btn-pill-mint">Start Exploring Free</a>
+        <a href="booking.html" class="btn-pill-dark">Create a Custom Trip</a>
+        <a href="packages.html" class="btn-pill-dark">View Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STACKLY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px;" aria-label="Stackly Travel Home">
+            <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="144" height="57">
+          </a>
+          <p>Mobilizing intelligent travel discovery, curated destination escapes, bespoke luxury packages, and personalized trip planning for modern life.</p>
+                    <div class="footer-social-row">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="X / Twitter">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="destinations.html">Destinations Catalog</a>
+            <a href="packages.html">Travel Packages</a>
+            <a href="hotels.html">Hotels & Resorts</a>
+            <a href="tour-details.html">Tour Details</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms & Agreements</a>
+            <a href="404.html">Security & Insurance</a>
+            <a href="destination-details.html">Destination Guides</a>
+            <a href="contact.html#faq">FAQ & Help Center</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-desc">Get quarterly travel updates, smart expedition alerts, and curated destination reports.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Travel updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved. Designed for travel clarity and unforgettable global journeys.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Destinations Management - Stackly Agency Admin Portal. Add new destinations, configure seasonal rates, and manage regional content.">
+  <title>Destinations Management | Stackly Agency Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="admin-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+          <span style="font-size: 0.72rem; background: var(--coral-accent); color: var(--white); padding: 2px 6px; border-radius: 4px; margin-left: 6px; font-weight: 700;">ADMIN</span>
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- Admin User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Operations Lead • Stackly Admin</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="admin-bookings.html" class="sidebar-link">
+          <span>📑</span> Bookings Management <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">12</span>
+        </a>
+        <a href="admin-destinations.html" class="sidebar-link active">
+          <span>📍</span> Destinations (124)
+        </a>
+        <a href="admin-packages.html" class="sidebar-link">
+          <span>📦</span> Tour Packages (48)
+        </a>
+        <a href="admin-hotels.html" class="sidebar-link">
+          <span>🏨</span> Partner Hotels (86)
+        </a>
+        <a href="admin-guides.html" class="sidebar-link">
+          <span>🧭</span> Field Guides & Drivers
+        </a>
+        <a href="admin-customers.html" class="sidebar-link">
+          <span>👥</span> Customers (9,850)
+        </a>
+        <a href="admin-reviews.html" class="sidebar-link">
+          <span>⭐</span> Guest Reviews (4.9★)
+        </a>
+        <a href="admin-reports.html" class="sidebar-link">
+          <span>📈</span> Financial Reports
+        </a>
+        <a href="admin-messages.html" class="sidebar-link">
+          <span>✉️</span> Inquiries & Messages
+        </a>
+        <a href="admin-settings.html" class="sidebar-link">
+          <span>⚙️</span> Portal Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Exit Admin
+        </a>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Toggle admin sidebar" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">Destinations Management</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">124 Destinations Live Across 6 Continents</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">+ Add Destination</button>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/team-1.webp" alt="Admin Julianne" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--sky-blue);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.88rem; color: var(--ocean-dark);">Julianne Vance</strong>
+              <span style="font-size: 0.72rem; color: var(--muted-text);">Operations Director</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="dashboard-body">
+        
+        <div class="data-table-card">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <h3 style="font-size: 1.15rem; margin: 0;">Active Travel Destinations</h3>
+            <input type="search" placeholder="Search destination or country..." class="form-control" style="width: 100%; max-width: 280px; padding: 6px 12px; font-size: 0.85rem;">
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Destination</th>
+                  <th>Region / Country</th>
+                  <th>Packages</th>
+                  <th>Base Price</th>
+                  <th>Rating</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/dest-bali.webp" alt="Bali" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <strong>Bali</strong>
+                    </div>
+                  </td>
+                  <td>Indonesia (Southeast Asia)</td>
+                  <td>6 Active Packages</td>
+                  <td>From $997</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 4.9</span> (420)</td>
+                  <td><span class="badge badge-green">Published</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Edit</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/dest-switzerland.webp" alt="Switzerland" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <strong>Swiss Alps</strong>
+                    </div>
+                  </td>
+                  <td>Switzerland (Western Europe)</td>
+                  <td>4 Active Packages</td>
+                  <td>From $2,450</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 5.0</span> (340)</td>
+                  <td><span class="badge badge-green">Published</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Edit</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/dest-maldives.webp" alt="Maldives" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <strong>Maldives Sanctuary</strong>
+                    </div>
+                  </td>
+                  <td>South Asia (Indian Ocean)</td>
+                  <td>5 Active Packages</td>
+                  <td>From $1,950</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 4.9</span> (295)</td>
+                  <td><span class="badge badge-green">Published</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Edit</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/dest-santorini.webp" alt="Santorini" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <strong>Santorini Caldera</strong>
+                    </div>
+                  </td>
+                  <td>Greece (Mediterranean)</td>
+                  <td>3 Active Packages</td>
+                  <td>From $1,450</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 4.8</span> (210)</td>
+                  <td><span class="badge badge-green">Published</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Edit</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/dest-kyoto.webp" alt="Kyoto" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <strong>Kyoto Heritage</strong>
+                    </div>
+                  </td>
+                  <td>Japan (East Asia)</td>
+                  <td>4 Active Packages</td>
+                  <td>From $1,380</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 4.9</span> (180)</td>
+                  <td><span class="badge badge-green">Published</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Edit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

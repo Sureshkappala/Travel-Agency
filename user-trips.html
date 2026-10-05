@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Upcoming Trips - Stackly Travel Customer Hub. View your planned itineraries, travel vouchers, daily schedules, and local guides.">
+  <title>My Upcoming Trips | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="User Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="user-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Explorer Traveler • Stackly</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="user-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="user-trips.html" class="sidebar-link active">
+          <span>✈️</span> My Upcoming Trips
+        </a>
+        <a href="user-bookings.html" class="sidebar-link">
+          <span>📑</span> All Bookings
+        </a>
+        <a href="user-wishlist.html" class="sidebar-link">
+          <span>♥</span> Saved Destinations
+        </a>
+        <a href="user-documents.html" class="sidebar-link">
+          <span>📄</span> Travel Documents
+        </a>
+        <a href="user-notifications.html" class="sidebar-link">
+          <span>🔔</span> Notifications <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">2</span>
+        </a>
+        <a href="user-profile.html" class="sidebar-link">
+          <span>👤</span> Traveler Profile
+        </a>
+        <a href="user-settings.html" class="sidebar-link">
+          <span>⚙️</span> Account Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Sign Out
+        </a>
+      </div>
+    
+
+    <!-- Dashboard Main Content Area -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar Header -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Open sidebar menu" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">My Upcoming Trips</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">Detailed itinerary, local guide contacts, and schedule updates.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <a href="destinations.html" class="btn btn-primary btn-sm">+ Plan New Trip</a>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/avatar-1.webp" alt="Eleanor Vance" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coral-accent);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.9rem; color: var(--ocean-dark);">Eleanor Vance</strong>
+              <span style="font-size: 0.75rem; color: var(--muted-text);">Explorer Tier Member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Body -->
+      <main class="dashboard-body">
+        
+        <!-- Next Trip Spotlight Card -->
+        <div style="background: linear-gradient(135deg, var(--ocean-dark), var(--ocean-blue)); border-radius: var(--radius-xl); padding: 32px; color: var(--white); margin-bottom: 30px; position: relative; overflow: hidden;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; position: relative; z-index: 2;">
+            <div style="max-width: 620px;">
+              <span class="badge badge-coral" style="margin-bottom: 12px; font-weight: 700;">CONFIRMED DEPARTURE • 45 DAYS TO GO</span>
+              <h1 style="color: var(--white); font-size: 2rem; margin-bottom: 8px;">Bali Tropical Escape (5 Days, 4 Nights)</h1>
+              <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.6;">
+                Private Pool Villa reserved at Viceroy Ubud Bali. Flight DPS-104 departs at 08:30 AM from Singapore Changi Terminal 3.
+              </p>
+              
+              <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; font-size: 0.88rem;">
+                <div><strong>Dates:</strong> Nov 15 – Nov 20, 2026</div>
+                <div><strong>Guests:</strong> 2 Adults</div>
+                <div><strong>Lead Guide:</strong> Ketut Ardi (+62 812-3456-7890)</div>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="tour-details.html?pkg=bali-escape" class="btn btn-primary btn-sm">Full Tour Details</a>
+                <a href="booking-confirmation.html" class="btn btn-outline-white btn-sm">Download Voucher PDF</a>
+                <a href="contact.html" class="btn btn-outline-white btn-sm">Contact Concierge</a>
+              </div>
+            </div>
+
+            <!-- Weather & Guide Fast Card -->
+            <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); padding: 20px 24px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.2); min-width: 240px;">
+              <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.8); margin-bottom: 6px;">Ubud Weather Forecast</div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                <span style="font-size: 2rem;">☀️</span>
+                <div>
+                  <span style="font-size: 1.8rem; font-weight: 700;">29°C</span>
+                  <div style="font-size: 0.75rem; color: rgba(255,255,255,0.85);">Sunny & Tropical</div>
+                </div>
+              </div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px; font-size: 0.82rem;">
+                <div><strong>Airport Pickup:</strong> Included (Private Van)</div>
+                <div><strong>Driver Status:</strong> Assigned</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Itinerary Day-by-Day -->
+        <div class="data-table-card" style="margin-bottom: 30px;">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="font-size: 1.2rem; margin: 0;">Daily Itinerary & Activity Timeline</h3>
+              <p class="text-muted" style="font-size: 0.82rem; margin-top: 4px;">Curated schedule customized to your preferences.</p>
+            </div>
+            <span class="badge badge-green">5 Days Planned</span>
+          </div>
+
+          <div style="padding: 24px; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Day 1 -->
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="background: var(--ocean-dark); color: var(--white); font-weight: 700; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">
+                D1
+              </div>
+              <div style="background: var(--sand-warm); padding: 18px 20px; border-radius: var(--radius-md); flex: 1; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <strong style="color: var(--ocean-dark); font-size: 1rem;">Airport Welcome & Luxury Ubud Transfer</strong>
+                  <span class="badge badge-coral" style="font-size: 0.72rem;">Nov 15</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--body-text); margin-bottom: 8px;">
+                  Private chauffeur Ketut Ardi meets you at DPS Ngurah Rai International Airport Arrival Gate with VIP name sign. Transfer through scenic Gianyar highlands to Viceroy Ubud Villa.
+                </p>
+                <span class="text-muted" style="font-size: 0.78rem;">Included: Airport Meet & Greet, Welcome Drink, 4-Course Dinner</span>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="background: var(--coral-accent); color: var(--white); font-weight: 700; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">
+                D2
+              </div>
+              <div style="background: var(--sand-warm); padding: 18px 20px; border-radius: var(--radius-md); flex: 1; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <strong style="color: var(--ocean-dark); font-size: 1rem;">Tegallalang Rice Terraces & Jungle Swing</strong>
+                  <span class="badge badge-coral" style="font-size: 0.72rem;">Nov 16</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--body-text); margin-bottom: 8px;">
+                  Early morning walking tour across the UNESCO World Heritage terraced paddies, organic coffee tasting session at Luwak plantation, and afternoon infinity pool relaxation.
+                </p>
+                <span class="text-muted" style="font-size: 0.78rem;">Included: Private Guide, All Admission Tickets, Traditional Buffet Lunch</span>
+              </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="background: var(--sky-blue); color: var(--white); font-weight: 700; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">
+                D3
+              </div>
+              <div style="background: var(--sand-warm); padding: 18px 20px; border-radius: var(--radius-md); flex: 1; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <strong style="color: var(--ocean-dark); font-size: 1rem;">Nusa Penida Catamaran Snorkeling Cruise</strong>
+                  <span class="badge badge-coral" style="font-size: 0.72rem;">Nov 17</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--body-text); margin-bottom: 8px;">
+                  High-speed yacht charter to Crystal Bay & Manta Point. Swim alongside giant manta rays and visit the iconic Kelingking T-Rex cliff viewpoint.
+                </p>
+                <span class="text-muted" style="font-size: 0.78rem;">Included: Catamaran Charter, Snorkel Gear, Towels, BBQ Lunch on Board</span>
+              </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="background: var(--tropical-green); color: var(--white); font-weight: 700; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">
+                D4
+              </div>
+              <div style="background: var(--sand-warm); padding: 18px 20px; border-radius: var(--radius-md); flex: 1; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <strong style="color: var(--ocean-dark); font-size: 1rem;">Uluwatu Cliffside Temple & Sunset Kecak Fire Dance</strong>
+                  <span class="badge badge-coral" style="font-size: 0.72rem;">Nov 18</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--body-text); margin-bottom: 8px;">
+                  Spectacular coastal drive to southern Bali, cliffside spiritual walk at Uluwatu Temple, followed by sunset Kecak performance and fresh seafood dinner at Jimbaran Bay.
+                </p>
+                <span class="text-muted" style="font-size: 0.78rem;">Included: VIP Reserved Amphitheater Seating, Seafood Dinner</span>
+              </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="background: var(--charcoal); color: var(--white); font-weight: 700; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem;">
+                D5
+              </div>
+              <div style="background: var(--sand-warm); padding: 18px 20px; border-radius: var(--radius-md); flex: 1; border: 1px solid var(--border-color);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <strong style="color: var(--ocean-dark); font-size: 1rem;">Spa Retreat & Airport Departure</strong>
+                  <span class="badge badge-coral" style="font-size: 0.72rem;">Nov 19</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--body-text); margin-bottom: 8px;">
+                  Relaxing 2-hour Balinese flower bath spa package at Lembah Spa, late check-out, and chauffeur transfer to DPS International Airport.
+                </p>
+                <span class="text-muted" style="font-size: 0.78rem;">Included: Full Spa Treatment, Private Airport Transfer</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Packing & Travel Checklist Card -->
+        <div class="data-table-card">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.15rem; margin: 0;">Bali Adventure Packing Checklist</h3>
+            <p class="text-muted" style="font-size: 0.82rem; margin-top: 4px;">Recommended gear for tropical excursions and temple visits.</p>
+          </div>
+          <div style="padding: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              <input type="checkbox" checked style="accent-color: var(--coral-accent); width: 18px; height: 18px;">
+              <span>Passport valid for 6+ months</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              <input type="checkbox" checked style="accent-color: var(--coral-accent); width: 18px; height: 18px;">
+              <span>Indonesia e-VOA Visa on Arrival</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              <input type="checkbox" checked style="accent-color: var(--coral-accent); width: 18px; height: 18px;">
+              <span>Tropical reef-safe sunscreen</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              <input type="checkbox" style="accent-color: var(--coral-accent); width: 18px; height: 18px;">
+              <span>Lightweight temple attire (Sarong provided)</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              <input type="checkbox" style="accent-color: var(--coral-accent); width: 18px; height: 18px;">
+              <span>Waterproof phone pouch for snorkeling</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+              <input type="checkbox" style="accent-color: var(--coral-accent); width: 18px; height: 18px;">
+              <span>Universal travel power adapter (Type C/F)</span>
+            </label>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

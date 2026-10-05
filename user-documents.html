@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Documents & Passes - Stackly Travel Customer Hub. Download verified flight confirmations, hotel vouchers, and e-visas.">
+  <title>Travel Documents & Passes | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="User Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="user-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Explorer Traveler • Stackly</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="user-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="user-trips.html" class="sidebar-link">
+          <span>✈️</span> My Upcoming Trips
+        </a>
+        <a href="user-bookings.html" class="sidebar-link">
+          <span>📑</span> All Bookings
+        </a>
+        <a href="user-wishlist.html" class="sidebar-link">
+          <span>♥</span> Saved Destinations
+        </a>
+        <a href="user-documents.html" class="sidebar-link active">
+          <span>📄</span> Travel Documents
+        </a>
+        <a href="user-notifications.html" class="sidebar-link">
+          <span>🔔</span> Notifications <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">2</span>
+        </a>
+        <a href="user-profile.html" class="sidebar-link">
+          <span>👤</span> Traveler Profile
+        </a>
+        <a href="user-settings.html" class="sidebar-link">
+          <span>⚙️</span> Account Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Sign Out
+        </a>
+      </div>
+    
+
+    <!-- Dashboard Main Content Area -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar Header -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Open sidebar menu" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">Travel Documents & Digital Passes</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">All verified vouchers, tickets, and emergency passes in one secure vault.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <a href="booking-confirmation.html" class="btn btn-primary btn-sm">Download All (.ZIP)</a>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/avatar-1.webp" alt="Eleanor Vance" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coral-accent);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.9rem; color: var(--ocean-dark);">Eleanor Vance</strong>
+              <span style="font-size: 0.75rem; color: var(--muted-text);">Explorer Tier Member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Body -->
+      <main class="dashboard-body">
+        
+        <!-- Active Trip Documents Section -->
+        <div class="data-table-card" style="margin-bottom: 28px;">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <span class="badge badge-coral" style="margin-bottom: 4px;">Active Adventure: Bali Nov 2026</span>
+              <h3 style="font-size: 1.2rem; margin: 0;">Mandatory Border & Resort Passes</h3>
+            </div>
+            <span class="badge badge-green">3 Documents Verified</span>
+          </div>
+
+          <div style="padding: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <!-- Doc 1 -->
+            <div style="border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px; background: var(--white); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="display: flex; gap: 14px; margin-bottom: 16px;">
+                <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--sky-light); color: var(--sky-blue); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                  ✈️
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; color: var(--ocean-dark);">DPS Flight E-Tickets</h4>
+                  <p class="text-muted" style="font-size: 0.82rem; margin: 0;">Singapore Airlines SQ-938 • Booking Ref: SQ-89201</p>
+                  <span style="font-size: 0.75rem; color: var(--tropical-green); font-weight: 600; display: inline-block; margin-top: 4px;">✓ Verified by Airline</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <span class="text-muted" style="font-size: 0.78rem;">PDF • 1.4 MB</span>
+                <a href="booking-confirmation.html" class="btn btn-outline btn-sm">Download PDF</a>
+              </div>
+            </div>
+
+            <!-- Doc 2 -->
+            <div style="border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px; background: var(--white); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="display: flex; gap: 14px; margin-bottom: 16px;">
+                <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--coral-light); color: var(--coral-accent); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                  🏨
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; color: var(--ocean-dark);">Viceroy Ubud Resort Voucher</h4>
+                  <p class="text-muted" style="font-size: 0.82rem; margin: 0;">Terrace Villa with Infinity Pool • Voucher #VU-7729</p>
+                  <span style="font-size: 0.75rem; color: var(--tropical-green); font-weight: 600; display: inline-block; margin-top: 4px;">✓ Guaranteed Check-in</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <span class="text-muted" style="font-size: 0.78rem;">PDF • 820 KB</span>
+                <a href="booking-confirmation.html" class="btn btn-outline btn-sm">Download PDF</a>
+              </div>
+            </div>
+
+            <!-- Doc 3 -->
+            <div style="border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px; background: var(--white); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="display: flex; gap: 14px; margin-bottom: 16px;">
+                <div style="width: 48px; height: 48px; border-radius: var(--radius-md); background: #DCFCE7; color: #16A34A; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                  🛡️
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px; color: var(--ocean-dark);">Comprehensive Travel Insurance</h4>
+                  <p class="text-muted" style="font-size: 0.82rem; margin: 0;">Allianz Global Assistance • Policy #AG-847291</p>
+                  <span style="font-size: 0.75rem; color: var(--tropical-green); font-weight: 600; display: inline-block; margin-top: 4px;">✓ $500,000 Medical Coverage</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 12px;">
+                <span class="text-muted" style="font-size: 0.78rem;">PDF • 2.1 MB</span>
+                <a href="booking-confirmation.html" class="btn btn-outline btn-sm">Download PDF</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Document Upload & Cloud Vault -->
+        <div style="background: var(--white); border-radius: var(--radius-lg); padding: 28px; border: 2px dashed var(--border-color); text-align: center; margin-bottom: 30px;">
+          <div style="font-size: 2.5rem; margin-bottom: 10px;">☁️</div>
+          <h3 style="font-size: 1.2rem; color: var(--ocean-dark); margin-bottom: 6px;">Upload Custom Travel Documents</h3>
+          <p class="text-muted" style="font-size: 0.88rem; max-width: 520px; margin: 0 auto 18px;">
+            Securely attach your scanned passport photo page, international driving permits, or vaccination certificates.
+          </p>
+          <a href="404.html" class="btn btn-outline">+ Select Document File</a>
+          <p style="font-size: 0.75rem; color: var(--muted-text); margin-top: 8px;">Supports PDF, JPEG, PNG up to 15 MB. 256-bit AES encrypted storage.</p>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

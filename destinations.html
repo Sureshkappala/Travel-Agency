@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our global travel destinations catalog. Filter by continent, travel style, and price to find your ideal vacation.">
+  <title>Destinations Catalog | Wanderlust Travel Agency</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header" id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Stackly Travel Home"><img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="144" height="57"></a>
+
+            <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="destinations.html" class="nav-link active">Destinations</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="tour-details.html" class="nav-link">Tours</a>
+        <a href="hotels.html" class="nav-link">Hotels</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="user-dashboard.html#wishlist" class="nav-action-btn" title="Saved Trips" aria-label="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span class="nav-action-badge nav-wishlist-count" style="display: none;">0</span>
+        </a>
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Plan Your Trip</a>
+        <button class="hamburger-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+    <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-top">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="logo" aria-label="Stackly Travel Home">
+          <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="130" height="51">
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close navigation drawer" type="button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home <span>→</span></a>
+        <a href="about.html">About Us <span>→</span></a>
+        <a href="destinations.html" class="active">Destinations <span>→</span></a>
+        <a href="packages.html">Packages <span>→</span></a>
+        <a href="tour-details.html">Tours <span>→</span></a>
+        <a href="hotels.html">Hotels <span>→</span></a>
+        <a href="contact.html">Contact <span>→</span></a>
+        <a href="user-dashboard.html">Customer Dashboard <span>→</span></a>
+        <a href="admin-dashboard.html">Agency Admin <span>→</span></a>
+      </nav>
+    </div>
+        <div class="mobile-nav-footer">
+      <a href="login.html" class="btn btn-outline" style="width: 100%;">Account Login</a>
+      <a href="booking.html" class="btn btn-primary" style="width: 100%;">Plan Your Trip</a>
+      
+      <!-- Quick Mobile Drawer Contact Info -->
+      <div class="mobile-drawer-contact-info">
+        <a href="tel:+18007822559" class="mobile-contact-item">
+          <span>📞</span> <span>+1 (800) 782-2559 <strong>(24/7 VIP)</strong></span>
+        </a>
+        <a href="mailto:concierge@stacklytravel.com" class="mobile-contact-item">
+          <span>✉️</span> <span>concierge@stacklytravel.com</span>
+        </a>
+        <div class="mobile-contact-item">
+          <span>📍</span> <span>Stackly HQ, 120 Travel Way, NYC</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Destinations</span>
+      </div>
+      <h1>Explore Global Destinations</h1>
+      <p class="text-muted" style="max-width: 600px; margin-top: 6px;">Discover enchanting cities, tropical shores, remote peaks, and historic wonders across 6 continents.</p>
+    </div>
+  </section>
+
+  <!-- Main Filter & Grid Section -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      
+      <!-- Interactive Filter Bar -->
+      <div class="filter-bar-card">
+        <div class="filter-grid">
+          <!-- Text Search -->
+          <div class="filter-search-box">
+            <svg class="filter-search-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/></svg>
+            <input type="text" class="filter-search-input" placeholder="Search destination, country, or keyword...">
+          </div>
+
+          <!-- Region Filter -->
+          <div>
+            <select class="filter-select filter-region-select">
+              <option value="all">All Regions</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="middle-east">Middle East</option>
+              <option value="americas">Americas</option>
+              <option value="africa">Africa</option>
+            </select>
+          </div>
+
+          <!-- Travel Type Filter -->
+          <div>
+            <select class="filter-select filter-type-select">
+              <option value="all">All Travel Styles</option>
+              <option value="adventure">Adventure</option>
+              <option value="beach">Beach & Coastal</option>
+              <option value="luxury">Luxury</option>
+              <option value="cultural">Cultural</option>
+              <option value="honeymoon">Honeymoon</option>
+              <option value="wildlife">Wildlife</option>
+            </select>
+          </div>
+
+          <!-- Price Filter -->
+          <div>
+            <select class="filter-select filter-price-select">
+              <option value="all">Any Price</option>
+              <option value="under-1000">Under $1,000</option>
+              <option value="1000-2000">$1,000 - $2,000</option>
+              <option value="over-2000">Above $2,000</option>
+            </select>
+          </div>
+
+          <!-- Clear Button -->
+          <button type="button" class="btn btn-outline btn-sm filter-clear-btn">Reset</button>
+        </div>
+
+        <!-- Quick Region Tags -->
+        <div class="filter-tags-row">
+          <span class="filter-tag-pill active" data-tag="all">All Destinations</span>
+          <span class="filter-tag-pill" data-tag="asia">Asia</span>
+          <span class="filter-tag-pill" data-tag="europe">Europe</span>
+          <span class="filter-tag-pill" data-tag="middle-east">Middle East</span>
+          <span class="filter-tag-pill" data-tag="africa">Africa</span>
+          <span class="filter-tag-pill" data-tag="beach">Beach Escapes</span>
+          <span class="filter-tag-pill" data-tag="adventure">Adventure</span>
+        </div>
+      </div>
+
+      <!-- Destinations Grid -->
+      <div class="destinations-grid-mixed" id="destinations-container">
+        
+        <!-- Destination 1: Bali -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Bali" data-country="Indonesia" data-region="asia" data-type="beach adventure honeymoon" data-price="890" data-rating="4.9">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-bali.webp" alt="Bali Rice Terraces and Temples" loading="lazy" width="800" height="600">
+            <button class="nav-action-btn wishlist-toggle-btn" data-id="dest-bali" title="Add to Wishlist" style="position:absolute; top:12px; right:12px; z-index:5;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+            <span class="badge badge-coral" style="position:absolute; top:12px; left:12px;">Most Popular</span>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Indonesia, Asia</span>
+            <h3 class="dest-title">Bali — Island of the Gods</h3>
+            <p class="dest-desc">Lush emerald rice terraces, cliffside ocean temples, yoga retreats, and surf shores.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$890</span>
+              </div>
+              <a href="destination-details.html?dest=bali" class="btn btn-primary btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 2: Dubai -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Dubai" data-country="UAE" data-region="middle-east" data-type="luxury adventure" data-price="1250" data-rating="4.8">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-dubai.webp" alt="Dubai Marina and Desert" loading="lazy" width="800" height="600">
+            <button class="nav-action-btn wishlist-toggle-btn" data-id="dest-dubai" title="Add to Wishlist" style="position:absolute; top:12px; right:12px; z-index:5;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">UAE, Middle East</span>
+            <h3 class="dest-title">Dubai Luxury Oasis</h3>
+            <p class="dest-desc">Skyline marvels, Michelin culinary scenes, and private Arabian red dune safaris.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,250</span>
+              </div>
+              <a href="destination-details.html?dest=dubai" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 3: Paris -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Paris" data-country="France" data-region="europe" data-type="cultural honeymoon luxury" data-price="1450" data-rating="4.9">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-paris.webp" alt="Eiffel Tower Paris" loading="lazy" width="800" height="600">
+            <button class="nav-action-btn wishlist-toggle-btn" data-id="dest-paris" title="Add to Wishlist" style="position:absolute; top:12px; right:12px; z-index:5;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">France, Europe</span>
+            <h3 class="dest-title">Paris City of Lights</h3>
+            <p class="dest-desc">Historic boulevards, Louvre art treasures, and enchanting Seine twilight cruises.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,450</span>
+              </div>
+              <a href="destination-details.html?dest=paris" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 4: Maldives -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Maldives" data-country="Maldives" data-region="asia" data-type="beach luxury honeymoon" data-price="1950" data-rating="5.0">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-maldives.webp" alt="Maldives Overwater Resort" loading="lazy" width="800" height="600">
+            <span class="badge badge-green" style="position:absolute; top:12px; left:12px;">Top Luxury</span>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Maldives, Indian Ocean</span>
+            <h3 class="dest-title">Maldives Atoll Sanctuary</h3>
+            <p class="dest-desc">Overwater stilt villas, coral reefs, manta ray diving, and secluded sunset dining.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,950</span>
+              </div>
+              <a href="destination-details.html?dest=maldives" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 5: Switzerland -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Switzerland" data-country="Switzerland" data-region="europe" data-type="adventure luxury" data-price="2450" data-rating="4.9">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-switzerland.webp" alt="Swiss Alps Mountains" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Switzerland, Europe</span>
+            <h3 class="dest-title">Swiss Alpine Peaks</h3>
+            <p class="dest-desc">Scenic mountain railways, sparkling Lake Lucerne, Matterhorn peaks, and ski chalets.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$2,450</span>
+              </div>
+              <a href="destination-details.html?dest=switzerland" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 6: Singapore -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Singapore" data-country="Singapore" data-region="asia" data-type="cultural luxury" data-price="1100" data-rating="4.8">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-singapore.webp" alt="Singapore Gardens by the Bay" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Singapore, Asia</span>
+            <h3 class="dest-title">Singapore Metropolis</h3>
+            <p class="dest-desc">Avatar-like futuristic gardens, Michelin hawker stalls, and luxury shopping.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,100</span>
+              </div>
+              <a href="destination-details.html?dest=singapore" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 7: Thailand -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Thailand" data-country="Thailand" data-region="asia" data-type="beach cultural adventure" data-price="780" data-rating="4.8">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-thailand.webp" alt="Thailand Karst Islands" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Thailand, Asia</span>
+            <h3 class="dest-title">Thailand Tropical Haven</h3>
+            <p class="dest-desc">Phi Phi limestone islands, Chiang Mai elephant sanctuaries, and Bangkok temples.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$780</span>
+              </div>
+              <a href="destination-details.html?dest=thailand" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 8: Goa -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Goa" data-country="India" data-region="asia" data-type="beach cultural" data-price="450" data-rating="4.7">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-goa.webp" alt="Goa Palm Coast" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">India, Asia</span>
+            <h3 class="dest-title">Goa Sun & Coast</h3>
+            <p class="dest-desc">Historic Portuguese cathedrals, sunny golden coastlines, and beach shacks.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$450</span>
+              </div>
+              <a href="destination-details.html?dest=goa" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 9: Kyoto -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Kyoto" data-country="Japan" data-region="asia" data-type="cultural honeymoon" data-price="1380" data-rating="4.9">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-kyoto.webp" alt="Kyoto Zen Garden and Torii" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Japan, Asia</span>
+            <h3 class="dest-title">Kyoto Cultural Zen</h3>
+            <p class="dest-desc">Ancient wooden shrines, bamboo groves, tea ceremonies, and seasonal cherry blossoms.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,380</span>
+              </div>
+              <a href="destination-details.html?dest=kyoto" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 10: Santorini -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Santorini" data-country="Greece" data-region="europe" data-type="honeymoon beach luxury" data-price="1650" data-rating="4.9">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-santorini.webp" alt="Santorini White Domes" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Greece, Europe</span>
+            <h3 class="dest-title">Santorini Caldera Charm</h3>
+            <p class="dest-desc">Iconic whitewashed cliff dwellings, azure dome churches, and Aegean sunsets.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,650</span>
+              </div>
+              <a href="destination-details.html?dest=santorini" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 11: Cappadocia -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Cappadocia" data-country="Turkey" data-region="middle-east" data-type="adventure cultural" data-price="980" data-rating="4.8">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-cappadocia.webp" alt="Cappadocia Hot Air Balloons" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Turkey, Middle East</span>
+            <h3 class="dest-title">Cappadocia Fairy Chimneys</h3>
+            <p class="dest-desc">Surreal rock valleys, sunrise balloon flights, and ancient underground cities.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$980</span>
+              </div>
+              <a href="destination-details.html?dest=cappadocia" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destination 12: Rome -->
+        <div class="dest-card col-span-4" data-filterable-item data-name="Rome" data-country="Italy" data-region="europe" data-type="cultural" data-price="1150" data-rating="4.8">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-rome.webp" alt="Rome Colosseum" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Italy, Europe</span>
+            <h3 class="dest-title">Rome Eternal City</h3>
+            <p class="dest-desc">Ancient amphitheaters, Vatican treasures, charming piazzas, and Italian gelato.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">From</span>
+                <span class="dest-price">$1,150</span>
+              </div>
+              <a href="destination-details.html?dest=rome" class="btn btn-outline btn-sm">Explore Details →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results State -->
+      <div class="no-results-state">
+        <div class="no-results-icon">🔍</div>
+        <h3>No Matching Destinations Found</h3>
+        <p class="text-muted" style="max-width: 420px; margin: 8px auto 20px;">Try adjusting your search criteria, selecting a different region, or resetting filters.</p>
+        <button type="button" class="btn btn-ocean filter-clear-btn">Reset All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- ==========================================================================
+       PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+    <!-- NEW SECTION A: BEST TIMES TO VISIT MATRIX -->
+  <section class="section-spacing bg-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-green">Travel Planner Matrix</span>
+        <h2>Best Times to Visit by Region</h2>
+        <p class="section-desc">Plan your takeoff around optimal weather, clear skies, and lively seasonal festivities.</p>
+      </div>
+
+      <div class="matrix-table-wrap">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>Ideal Months</th>
+              <th>Climate & Weather</th>
+              <th>Seasonal Highlight</th>
+              <th>Crowd Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bali, Indonesia</strong></td>
+              <td>April – October</td>
+              <td>Warm & Dry (28°C / 82°F)</td>
+              <td>Surfing & Jungle Trekking</td>
+              <td><span class="badge badge-green">Moderate</span></td>
+            </tr>
+            <tr>
+              <td><strong>Swiss Alps, Switzerland</strong></td>
+              <td>Dec – Mar & Jun – Sep</td>
+              <td>Snowy Winter / Sunny Alpine Summer</td>
+              <td>Skiing / Wildflower Hiking</td>
+              <td><span class="badge badge-coral">High</span></td>
+            </tr>
+            <tr>
+              <td><strong>Maldives Islands</strong></td>
+              <td>November – April</td>
+              <td>Calm, Turquoise Waters (29°C)</td>
+              <td>Manta Ray Snorkeling</td>
+              <td><span class="badge badge-blue">Popular</span></td>
+            </tr>
+            <tr>
+              <td><strong>Dubai, UAE</strong></td>
+              <td>October – April</td>
+              <td>Pleasant Desert Breeze (24°C)</td>
+              <td>Dune Safaris & Yachting</td>
+              <td><span class="badge badge-green">Ideal</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION B: VISA & ENTRY READINESS -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div style="background: var(--white); padding: 36px; border-radius: var(--radius-xl); border: 1px solid var(--border-color);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+          <div>
+            <span class="section-tag tag-coral">Hassle-Free Logistics</span>
+            <h3 style="margin-top: 6px;">Visa-on-Arrival & Entry Assistance</h3>
+          </div>
+          <a href="contact.html" class="btn btn-outline btn-sm">Consult Visa Specialist →</a>
+        </div>
+        <p class="text-muted" style="margin-bottom: 20px;">We provide comprehensive visa documentation guidance and expedited fast-track customs airport vouchers for all international bookings.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+          <div style="background: var(--sand-warm); padding: 16px; border-radius: var(--radius-md);"><strong>✓ 30+ Countries:</strong> Instant eVisa Support</div>
+          <div style="background: var(--sand-warm); padding: 16px; border-radius: var(--radius-md);"><strong>✓ Passport Checks:</strong> 6-Month Validity Alerts</div>
+          <div style="background: var(--sand-warm); padding: 16px; border-radius: var(--radius-md);"><strong>✓ Health Protocols:</strong> Updated Entry Briefs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pre-footer-cta">
+    <div class="container">
+      <h2>Join thousands of proactive travelers and families discovering the world with clean, modern travel clarity.</h2>
+      <div class="pre-footer-buttons">
+        <a href="destinations.html" class="btn-pill-mint">Start Exploring Free</a>
+        <a href="booking.html" class="btn-pill-dark">Create a Custom Trip</a>
+        <a href="packages.html" class="btn-pill-dark">View Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STACKLY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px;" aria-label="Stackly Travel Home">
+            <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="144" height="57">
+          </a>
+          <p>Mobilizing intelligent travel discovery, curated destination escapes, bespoke luxury packages, and personalized trip planning for modern life.</p>
+                    <div class="footer-social-row">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="X / Twitter">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="destinations.html">Destinations Catalog</a>
+            <a href="packages.html">Travel Packages</a>
+            <a href="hotels.html">Hotels & Resorts</a>
+            <a href="tour-details.html">Tour Details</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms & Agreements</a>
+            <a href="404.html">Security & Insurance</a>
+            <a href="destination-details.html">Destination Guides</a>
+            <a href="contact.html#faq">FAQ & Help Center</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-desc">Get quarterly travel updates, smart expedition alerts, and curated destination reports.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Travel updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved. Designed for travel clarity and unforgettable global journeys.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

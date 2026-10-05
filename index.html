@@ -1,0 +1,1312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wanderlust Travel Agency - Discover breathtaking destinations, curated vacation packages, luxury stays, and personalized adventures worldwide.">
+  <title>Wanderlust Travel Agency | Discover Unforgettable Journeys</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="main-header">
+    <div class="container navbar">
+      <!-- Agency Logo -->
+      <a href="index.html" class="logo" aria-label="Stackly Travel Home"><img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="144" height="57"></a>
+
+            <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="tour-details.html" class="nav-link">Tours</a>
+        <a href="hotels.html" class="nav-link">Hotels</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions & Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <a href="destinations.html" class="nav-action-btn" title="Search Destinations" aria-label="Search Destinations">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" stroke-width="2"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/>
+          </svg>
+        </a>
+
+        <!-- Wishlist -->
+        <a href="user-dashboard.html#wishlist" class="nav-action-btn" title="Saved Trips & Wishlist" aria-label="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span class="nav-action-badge nav-wishlist-count" style="display: none;">0</span>
+        </a>
+
+        <!-- Login -->
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+
+        <!-- Plan Your Trip CTA -->
+        <a href="booking.html" class="btn btn-primary btn-sm">Plan Your Trip</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-top">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="logo" aria-label="Stackly Travel Home">
+          <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="130" height="51">
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close navigation drawer" type="button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="active">Home <span>→</span></a>
+        <a href="about.html">About Us <span>→</span></a>
+        <a href="destinations.html">Destinations <span>→</span></a>
+        <a href="packages.html">Packages <span>→</span></a>
+        <a href="tour-details.html">Tours <span>→</span></a>
+        <a href="hotels.html">Hotels <span>→</span></a>
+        <a href="contact.html">Contact <span>→</span></a>
+        <a href="user-dashboard.html">Customer Dashboard <span>→</span></a>
+        <a href="admin-dashboard.html">Agency Admin <span>→</span></a>
+      </nav>
+    </div>
+        <div class="mobile-nav-footer">
+      <a href="login.html" class="btn btn-outline" style="width: 100%;">Account Login</a>
+      <a href="booking.html" class="btn btn-primary" style="width: 100%;">Plan Your Trip</a>
+      
+      <!-- Quick Mobile Drawer Contact Info -->
+      <div class="mobile-drawer-contact-info">
+        <a href="tel:+18007822559" class="mobile-contact-item">
+          <span>📞</span> <span>+1 (800) 782-2559 <strong>(24/7 VIP)</strong></span>
+        </a>
+        <a href="mailto:concierge@stacklytravel.com" class="mobile-contact-item">
+          <span>✉️</span> <span>concierge@stacklytravel.com</span>
+        </a>
+        <div class="mobile-contact-item">
+          <span>📍</span> <span>Stackly HQ, 120 Travel Way, NYC</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 1: HERO & OVERLAPPING SEARCH PANEL
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left Content -->
+        <div class="hero-content">
+          <div class="section-tag tag-blue hero-tag">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+            Curated Global Expeditions
+          </div>
+          <h1 class="hero-title">
+            Discover Places You'll <span>Never Forget.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Explore inspiring destinations, curated travel packages, unforgettable cultural experiences, and personalized journeys crafted by seasoned experts.
+          </p>
+          <div class="hero-actions">
+            <a href="destinations.html" class="btn btn-primary btn-lg">Explore Destinations</a>
+            <a href="#plan-trip" class="btn btn-ocean btn-lg">Plan Your Trip</a>
+          </div>
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <h4>120+</h4>
+              <p>Destinations</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>98.4%</h4>
+              <p>Satisfied Guests</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>14 Yrs</h4>
+              <p>Travel Excellence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Media Collage -->
+        <div class="hero-visual">
+          <div class="hero-img-card">
+            <img src="assets/images/hero-main.webp" alt="Traveler exploring majestic mountain ruins at Machu Picchu" width="1200" height="800">
+          </div>
+          <div class="hero-floating-dest">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            Featured: Machu Picchu, Peru
+          </div>
+          <div class="hero-floating-badge">
+            <div class="hero-badge-icon">★</div>
+            <div>
+              <strong style="display:block; font-size: 0.95rem; color: var(--ocean-dark);">Rated 4.95 / 5</strong>
+              <span style="font-size: 0.8rem; color: var(--muted-text);">From 12,400+ Verified Reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlapping Search & Booking Panel -->
+      <div class="trip-search-panel" id="hero-search">
+        <form action="destinations.html" method="GET" class="search-form-grid">
+          <!-- Destination Field -->
+          <div class="search-field">
+            <label for="search-destination">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+              Destination
+            </label>
+            <div class="search-input-wrapper">
+              <input type="text" id="search-destination" name="search" placeholder="Where do you want to go?" required>
+            </div>
+          </div>
+
+          <!-- Travel Date -->
+          <div class="search-field">
+            <label for="search-date">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Travel Date
+            </label>
+            <div class="search-input-wrapper">
+              <input type="date" id="search-date" name="date">
+            </div>
+          </div>
+
+          <!-- Travelers -->
+          <div class="search-field">
+            <label for="search-travelers">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              Travelers
+            </label>
+            <div class="search-input-wrapper">
+              <select id="search-travelers" name="travelers">
+                <option value="1">1 Traveler (Solo)</option>
+                <option value="2" selected>2 Travelers (Couple)</option>
+                <option value="3-5">3 - 5 (Family / Small Group)</option>
+                <option value="6+">6+ (Large Group)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Trip Type -->
+          <div class="search-field">
+            <label for="search-type">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+              Trip Type
+            </label>
+            <div class="search-input-wrapper">
+              <select id="search-type" name="type">
+                <option value="all">All Experiences</option>
+                <option value="adventure">Adventure & Trekking</option>
+                <option value="beach">Beach & Relaxation</option>
+                <option value="luxury">Luxury & Resorts</option>
+                <option value="family">Family Friendly</option>
+                <option value="honeymoon">Honeymoon Romance</option>
+                <option value="cultural">Cultural Heritage</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" style="height: 48px;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            Search Trips
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: POPULAR DESTINATIONS (BENTO MIXED GRID)
+       ========================================================================== -->
+  <section class="section-spacing bg-white" id="destinations">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Explore The Globe</span>
+        <h2>Popular Destinations</h2>
+        <p class="section-desc">Handpicked dream escapes with unbeatable scenery, authentic hospitality, and unforgettable memories.</p>
+      </div>
+
+      <div class="destinations-grid-mixed">
+        <!-- Bali (Large Overlay Bento) -->
+        <div class="dest-card dest-card-featured col-span-8">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-bali.webp" alt="Bali Rice Terraces and Temple" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-badge">
+            <span class="badge badge-coral">Top Choice</span>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Indonesia</span>
+            <h3 class="dest-title">Bali — Island of the Gods</h3>
+            <p class="dest-desc">Lush emerald rice terraces, cliffside ocean temples, volcanic sunsets, and serene spiritual retreats.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$890</span>
+              </div>
+              <a href="destination-details.html?dest=bali" class="btn btn-primary btn-sm">Explore Bali →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dubai (Standard Bento) -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-dubai.webp" alt="Dubai Modern Skyline and Desert" loading="lazy" width="800" height="600">
+            <button class="nav-action-btn wishlist-toggle-btn" data-id="dest-dubai" title="Add to Wishlist" style="position:absolute; top:12px; right:12px; z-index:5;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">United Arab Emirates</span>
+            <h3 class="dest-title">Dubai Luxury & Dunes</h3>
+            <p class="dest-desc">Futuristic architecture, private yachting, and exhilarating red desert safaris.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$1,250</span>
+              </div>
+              <a href="destination-details.html?dest=dubai" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paris -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-paris.webp" alt="Eiffel Tower Paris France" loading="lazy" width="800" height="600">
+            <button class="nav-action-btn wishlist-toggle-btn" data-id="dest-paris" title="Add to Wishlist" style="position:absolute; top:12px; right:12px; z-index:5;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">France</span>
+            <h3 class="dest-title">Parisian Romance</h3>
+            <p class="dest-desc">Charming cobblestone cafes, world-class art, and romantic evening Seine river cruises.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$1,450</span>
+              </div>
+              <a href="destination-details.html?dest=paris" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maldives -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-maldives.webp" alt="Maldives Overwater Bungalows" loading="lazy" width="800" height="600">
+            <span class="badge badge-green" style="position:absolute; top:12px; left:12px;">Private Island</span>
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Maldives</span>
+            <h3 class="dest-title">Maldives Atoll Paradise</h3>
+            <p class="dest-desc">Overwater villas, crystal turquoise lagoons, and private snorkeling with manta rays.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$1,950</span>
+              </div>
+              <a href="destination-details.html?dest=maldives" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Switzerland -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-switzerland.webp" alt="Swiss Alps Mountain View" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Switzerland</span>
+            <h3 class="dest-title">Swiss Alpine Splendor</h3>
+            <p class="dest-desc">Snowcapped peaks, panoramic mountain railways, and sparkling alpine lakes.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$2,450</span>
+              </div>
+              <a href="destination-details.html?dest=switzerland" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Singapore -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-singapore.webp" alt="Singapore Marina Bay" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Singapore</span>
+            <h3 class="dest-title">Singapore Garden Metropolis</h3>
+            <p class="dest-desc">Futuristic supertrees, rooftop infinity pools, and renowned culinary night markets.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$1,100</span>
+              </div>
+              <a href="destination-details.html?dest=singapore" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thailand -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-thailand.webp" alt="Thailand Limestone Cliffs and Longtail Boats" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">Thailand</span>
+            <h3 class="dest-title">Thailand Islands & Temples</h3>
+            <p class="dest-desc">Emerald limestone bays, vibrant night bazaars, and opulent golden temples.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$780</span>
+              </div>
+              <a href="destination-details.html?dest=thailand" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Goa -->
+        <div class="dest-card col-span-4">
+          <div class="dest-card-img-wrap">
+            <img src="assets/images/dest-goa.webp" alt="Goa Sunset Beach Palm Trees" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <span class="dest-location">India</span>
+            <h3 class="dest-title">Goa Sun & Coastline</h3>
+            <p class="dest-desc">Golden sandy shores, Portuguese heritage villas, spice plantations, and fresh seafood.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Starting From</span>
+                <span class="dest-price">$450</span>
+              </div>
+              <a href="destination-details.html?dest=goa" class="btn btn-outline btn-sm">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="destinations.html" class="btn btn-ocean">View All 120+ Destinations →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: FEATURED TRAVEL PACKAGES
+       ========================================================================== -->
+  <section class="section-spacing bg-sand" id="packages">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-green">All-Inclusive Journeys</span>
+        <h2>Featured Travel Packages</h2>
+        <p class="section-desc">Complete itineraries designed with private transfers, 4 & 5-star accommodations, guided tours, and gourmet dining.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1: Bali Escape -->
+        <div class="package-card">
+          <div class="pkg-img-wrap">
+            <img src="assets/images/pkg-bali-escape.webp" alt="Bali Escape Package" loading="lazy" width="800" height="550">
+            <span class="pkg-duration-badge">⏱ 5 Days / 4 Nights</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-header-row">
+              <span class="pkg-dest">Bali, Indonesia</span>
+              <span class="rating-badge">★ 4.9 (340)</span>
+            </div>
+            <h3 class="pkg-title">Bali Tropical Escape</h3>
+            <div class="pkg-amenities">
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> 5-Star Resort</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3z"/></svg> Private Car</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg> Daily Breakfast</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price-col">
+                <span>Per Person</span>
+                <strong>$890</strong>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <a href="tour-details.html?pkg=bali-escape" class="btn btn-outline btn-sm">Details</a>
+                <a href="booking.html?package=bali-escape" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2: Dubai Explorer -->
+        <div class="package-card">
+          <div class="pkg-img-wrap">
+            <img src="assets/images/pkg-dubai-explorer.webp" alt="Dubai Explorer Package" loading="lazy" width="800" height="550">
+            <span class="pkg-duration-badge">⏱ 4 Days / 3 Nights</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-header-row">
+              <span class="pkg-dest">Dubai, UAE</span>
+              <span class="rating-badge">★ 4.8 (210)</span>
+            </div>
+            <h3 class="pkg-title">Dubai Desert & City Lights</h3>
+            <div class="pkg-amenities">
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> Luxury Suite</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> Safari & BBQ</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99z"/></svg> Airport Pickup</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price-col">
+                <span>Per Person</span>
+                <strong>$1,250</strong>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <a href="tour-details.html?pkg=dubai-explorer" class="btn btn-outline btn-sm">Details</a>
+                <a href="booking.html?package=dubai-explorer" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3: Maldives Getaway -->
+        <div class="package-card">
+          <div class="pkg-img-wrap">
+            <img src="assets/images/pkg-maldives-getaway.webp" alt="Maldives Getaway Package" loading="lazy" width="800" height="550">
+            <span class="pkg-duration-badge">⏱ 5 Days / 4 Nights</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-header-row">
+              <span class="pkg-dest">Maldives</span>
+              <span class="rating-badge">★ 5.0 (480)</span>
+            </div>
+            <h3 class="pkg-title">Maldives Overwater Sanctuary</h3>
+            <div class="pkg-amenities">
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> Water Villa</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg> Seaplane Transfer</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg> All Meals</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price-col">
+                <span>Per Person</span>
+                <strong>$1,950</strong>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <a href="tour-details.html?pkg=maldives-getaway" class="btn btn-outline btn-sm">Details</a>
+                <a href="booking.html?package=maldives-getaway" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 4: Swiss Adventure -->
+        <div class="package-card">
+          <div class="pkg-img-wrap">
+            <img src="assets/images/pkg-swiss-adventure.webp" alt="Swiss Adventure Package" loading="lazy" width="800" height="550">
+            <span class="pkg-duration-badge">⏱ 7 Days / 6 Nights</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-header-row">
+              <span class="pkg-dest">Switzerland</span>
+              <span class="rating-badge">★ 4.9 (195)</span>
+            </div>
+            <h3 class="pkg-title">Swiss Alps Panorama Tour</h3>
+            <div class="pkg-amenities">
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> Alpine Lodges</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4z"/></svg> Swiss Rail Pass</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2L7.5 11 2 18h20l-8-12z"/></svg> Glacier Excursion</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price-col">
+                <span>Per Person</span>
+                <strong>$2,450</strong>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <a href="tour-details.html?pkg=swiss-adventure" class="btn btn-outline btn-sm">Details</a>
+                <a href="booking.html?package=swiss-adventure" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 5: Thailand Discovery -->
+        <div class="package-card">
+          <div class="pkg-img-wrap">
+            <img src="assets/images/pkg-thailand-discovery.webp" alt="Thailand Discovery Package" loading="lazy" width="800" height="550">
+            <span class="pkg-duration-badge">⏱ 6 Days / 5 Nights</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-header-row">
+              <span class="pkg-dest">Thailand</span>
+              <span class="rating-badge">★ 4.8 (310)</span>
+            </div>
+            <h3 class="pkg-title">Thailand Island & Temple Trail</h3>
+            <div class="pkg-amenities">
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> Beachfront Stay</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2z"/></svg> Island Speedboat</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> Street Food Tour</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price-col">
+                <span>Per Person</span>
+                <strong>$780</strong>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <a href="tour-details.html?pkg=thailand-discovery" class="btn btn-outline btn-sm">Details</a>
+                <a href="booking.html?package=thailand-discovery" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 6: Kenya Wildlife Safari -->
+        <div class="package-card">
+          <div class="pkg-img-wrap">
+            <img src="assets/images/pkg-safari-kenya.webp" alt="Kenya Wildlife Safari Package" loading="lazy" width="800" height="550">
+            <span class="pkg-duration-badge">⏱ 6 Days / 5 Nights</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-header-row">
+              <span class="pkg-dest">Kenya, Africa</span>
+              <span class="rating-badge">★ 4.9 (160)</span>
+            </div>
+            <h3 class="pkg-title">Maasai Mara Big Five Safari</h3>
+            <div class="pkg-amenities">
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg> Luxury Tented Camp</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99z"/></svg> 4x4 Game Drives</span>
+              <span class="pkg-amenity-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg> Bush Dinners</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price-col">
+                <span>Per Person</span>
+                <strong>$2,100</strong>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <a href="tour-details.html?pkg=safari-kenya" class="btn btn-outline btn-sm">Details</a>
+                <a href="booking.html?package=safari-kenya" class="btn btn-primary btn-sm">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="packages.html" class="btn btn-primary btn-lg">Explore All Curated Packages →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: TRAVEL EXPERIENCES
+       ========================================================================== -->
+  <section class="section-spacing bg-white" id="experiences">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-blue">Tailored Vacations</span>
+        <h2>Choose the Experience That Fits You</h2>
+        <p class="section-desc">From adrenaline-filled peaks to tranquil private islands, discover travel styled precisely to your soul.</p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Experience 1: Adventure -->
+        <a href="destinations.html?type=adventure" class="exp-card">
+          <img src="assets/images/exp-adventure.webp" alt="Adventure travel and mountain hiking" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">⛰</div>
+            <h3 class="exp-title">Adventure & Hiking</h3>
+            <p class="exp-desc">Trek remote summits, canyons & ancient paths.</p>
+          </div>
+        </a>
+
+        <!-- Experience 2: Beach -->
+        <a href="destinations.html?type=beach" class="exp-card">
+          <img src="assets/images/exp-beach.webp" alt="Beach vacation relaxation" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">🏖</div>
+            <h3 class="exp-title">Beach & Coastal</h3>
+            <p class="exp-desc">Pure white sand, warm tides and lagoon cocktails.</p>
+          </div>
+        </a>
+
+        <!-- Experience 3: Luxury -->
+        <a href="destinations.html?type=luxury" class="exp-card">
+          <img src="assets/images/exp-luxury.webp" alt="Luxury resort travel" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">✦</div>
+            <h3 class="exp-title">Luxury Escapes</h3>
+            <p class="exp-desc">5-star private villas, yachts & concierge care.</p>
+          </div>
+        </a>
+
+        <!-- Experience 4: Family -->
+        <a href="destinations.html?type=family" class="exp-card">
+          <img src="assets/images/exp-family.webp" alt="Family traveling together" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">👨‍👩‍👧</div>
+            <h3 class="exp-title">Family Fun</h3>
+            <p class="exp-desc">Safe, engaging itineraries for all generations.</p>
+          </div>
+        </a>
+
+        <!-- Experience 5: Honeymoon -->
+        <a href="destinations.html?type=honeymoon" class="exp-card">
+          <img src="assets/images/exp-honeymoon.webp" alt="Couple on honeymoon sunset beach" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">♥</div>
+            <h3 class="exp-title">Honeymoon Romance</h3>
+            <p class="exp-desc">Intimate getaways and unforgettable sunsets.</p>
+          </div>
+        </a>
+
+        <!-- Experience 6: Cultural -->
+        <a href="destinations.html?type=cultural" class="exp-card">
+          <img src="assets/images/exp-cultural.webp" alt="Ancient cultural temple" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">🏛</div>
+            <h3 class="exp-title">Cultural Heritage</h3>
+            <p class="exp-desc">Immerse in ancient wonders, art and traditions.</p>
+          </div>
+        </a>
+
+        <!-- Experience 7: Wildlife -->
+        <a href="destinations.html?type=wildlife" class="exp-card">
+          <img src="assets/images/exp-wildlife.webp" alt="Wildlife and safari animals" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">🐾</div>
+            <h3 class="exp-title">Wildlife & Safari</h3>
+            <p class="exp-desc">Witness majestic creatures in untouched habitats.</p>
+          </div>
+        </a>
+
+        <!-- Experience 8: Road Trip -->
+        <a href="destinations.html?type=roadtrip" class="exp-card">
+          <img src="assets/images/exp-roadtrip.webp" alt="Scenic road trip along coastline" loading="lazy" width="600" height="450">
+          <div class="exp-card-overlay">
+            <div class="exp-icon">🚗</div>
+            <h3 class="exp-title">Scenic Road Trips</h3>
+            <p class="exp-desc">Winding coastal drives and freedom on the open road.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: WHY TRAVEL WITH US
+       ========================================================================== -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-green">The Wanderlust Standard</span>
+        <h2>Why Travel With Us</h2>
+        <p class="section-desc">We combine localized expertise with global connections to guarantee seamless, stress-free travel from takeoff to touchdown.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="benefit-content">
+            <h4>Handpicked Destinations</h4>
+            <p>Every resort, guide, and tour route is personally vetted by our travel curators for unmatched quality and comfort.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <div class="benefit-content">
+            <h4>Trusted Travel Partners</h4>
+            <p>Direct partnerships with top-tier airlines, luxury hotel collections, and licensed local expedition leaders.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <div class="benefit-content">
+            <h4>Flexible Packages & Dates</h4>
+            <p>Plans change — enjoy hassle-free date rescheduling, customizable daily stops, and transparent cancellation options.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <div class="benefit-content">
+            <h4>24/7 Concierge Support</h4>
+            <p>Our dedicated round-the-clock support desk assists you wherever you are, anytime via WhatsApp, phone, or live chat.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div class="benefit-content">
+            <h4>100% Secure Booking</h4>
+            <p>Encrypted data protection, zero hidden fees, and verified instant booking confirmations backed by travel insurance.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="benefit-card">
+          <div class="benefit-icon-wrap">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          </div>
+          <div class="benefit-content">
+            <h4>Personalized Experiences</h4>
+            <p>Tailor every detail: private guides, dietary preferences, special occasion arrangements, and flexible pacing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: PLAN YOUR TRIP (INTERACTIVE WIZARD)
+       ========================================================================== -->
+  <section class="section-spacing bg-white" id="plan-trip">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-coral">Interactive Planner</span>
+        <h2>Build Your Custom Trip in 4 Simple Steps</h2>
+        <p class="section-desc">Select your preferences below to generate an instant travel quote and curated itinerary.</p>
+      </div>
+
+      <div class="plan-wizard-card">
+        <!-- Wizard Step Tabs -->
+        <div class="wizard-steps-header">
+          <div class="wizard-step-tab active" data-step="1">
+            <div class="wizard-step-num">01</div>
+            <div class="wizard-step-info">
+              <strong>Choose Destination</strong>
+              <span>Select where to go</span>
+            </div>
+          </div>
+          <div class="wizard-step-tab" data-step="2">
+            <div class="wizard-step-num">02</div>
+            <div class="wizard-step-info">
+              <strong>Pick Your Dates</strong>
+              <span>Select travel window</span>
+            </div>
+          </div>
+          <div class="wizard-step-tab" data-step="3">
+            <div class="wizard-step-num">03</div>
+            <div class="wizard-step-info">
+              <strong>Experience Type</strong>
+              <span>Adventure, Luxury, etc.</span>
+            </div>
+          </div>
+          <div class="wizard-step-tab" data-step="4">
+            <div class="wizard-step-num">04</div>
+            <div class="wizard-step-info">
+              <strong>Review & Book</strong>
+              <span>Confirm & continue</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wizard Step Content Panels -->
+        <div class="wizard-content-box">
+          <!-- Step 1 Panel -->
+          <div class="wizard-step-panel active" id="wizard-panel-1">
+            <h4 style="margin-bottom: 8px;">Step 1: Where would you like to travel?</h4>
+            <p class="text-muted" style="font-size: 0.92rem;">Select one of our popular hubs or enter your destination of choice.</p>
+            <div class="wizard-grid-select">
+              <div class="wizard-option-item selected" data-field="destination" data-value="Bali, Indonesia">
+                <span style="font-size: 1.5rem;">🌴</span>
+                <strong>Bali, Indonesia</strong>
+              </div>
+              <div class="wizard-option-item" data-field="destination" data-value="Dubai, UAE">
+                <span style="font-size: 1.5rem;">🏙</span>
+                <strong>Dubai, UAE</strong>
+              </div>
+              <div class="wizard-option-item" data-field="destination" data-value="Paris, France">
+                <span style="font-size: 1.5rem;">🗼</span>
+                <strong>Paris, France</strong>
+              </div>
+              <div class="wizard-option-item" data-field="destination" data-value="Maldives">
+                <span style="font-size: 1.5rem;">🏝</span>
+                <strong>Maldives Islands</strong>
+              </div>
+              <div class="wizard-option-item" data-field="destination" data-value="Switzerland">
+                <span style="font-size: 1.5rem;">🏔</span>
+                <strong>Swiss Alps</strong>
+              </div>
+              <div class="wizard-option-item" data-field="destination" data-value="Thailand">
+                <span style="font-size: 1.5rem;">⛩</span>
+                <strong>Thailand Islands</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 Panel -->
+          <div class="wizard-step-panel" id="wizard-panel-2">
+            <h4 style="margin-bottom: 8px;">Step 2: When are you planning to take off?</h4>
+            <p class="text-muted" style="font-size: 0.92rem;">Choose your approximate travel timeframe.</p>
+            <div class="wizard-grid-select">
+              <div class="wizard-option-item selected" data-field="dates" data-value="Next Month (Flexible)">
+                <span style="font-size: 1.5rem;">📅</span>
+                <strong>Next Month</strong>
+              </div>
+              <div class="wizard-option-item" data-field="dates" data-value="Within 3 Months">
+                <span style="font-size: 1.5rem;">⏳</span>
+                <strong>Within 3 Months</strong>
+              </div>
+              <div class="wizard-option-item" data-field="dates" data-value="Holiday Season">
+                <span style="font-size: 1.5rem;">❄</span>
+                <strong>Holiday Season</strong>
+              </div>
+              <div class="wizard-option-item" data-field="dates" data-value="Summer 2026">
+                <span style="font-size: 1.5rem;">☀️</span>
+                <strong>Summer 2026</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 Panel -->
+          <div class="wizard-step-panel" id="wizard-panel-3">
+            <h4 style="margin-bottom: 8px;">Step 3: What style of experience do you crave?</h4>
+            <p class="text-muted" style="font-size: 0.92rem;">Select the vibe that best matches your dream getaway.</p>
+            <div class="wizard-grid-select">
+              <div class="wizard-option-item selected" data-field="experience" data-value="Adventure & Nature">
+                <span style="font-size: 1.5rem;">🧗</span>
+                <strong>Adventure & Nature</strong>
+              </div>
+              <div class="wizard-option-item" data-field="experience" data-value="Beach & Relaxation">
+                <span style="font-size: 1.5rem;">🏖</span>
+                <strong>Beach & Relaxation</strong>
+              </div>
+              <div class="wizard-option-item" data-field="experience" data-value="Luxury & Wellness">
+                <span style="font-size: 1.5rem;">✨</span>
+                <strong>Luxury & Wellness</strong>
+              </div>
+              <div class="wizard-option-item" data-field="experience" data-value="Honeymoon Romance">
+                <span style="font-size: 1.5rem;">💖</span>
+                <strong>Honeymoon Romance</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 Panel -->
+          <div class="wizard-step-panel" id="wizard-panel-4">
+            <h4 style="margin-bottom: 8px;">Step 4: Review Your Customized Plan</h4>
+            <p class="text-muted" style="font-size: 0.92rem;">Everything looks set! Review your choices and proceed to finalize booking.</p>
+            
+            <div style="background: var(--sand-warm); padding: 20px; border-radius: var(--radius-md); margin-top: 16px; border: 1px solid var(--border-color);">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+                <div>
+                  <span style="font-size: 0.8rem; color: var(--muted-text); display: block;">Destination</span>
+                  <strong id="review-dest" style="color: var(--ocean-dark);">Bali, Indonesia</strong>
+                </div>
+                <div>
+                  <span style="font-size: 0.8rem; color: var(--muted-text); display: block;">Target Date</span>
+                  <strong id="review-dates" style="color: var(--ocean-dark);">Next Month (Flexible)</strong>
+                </div>
+                <div>
+                  <span style="font-size: 0.8rem; color: var(--muted-text); display: block;">Experience</span>
+                  <strong id="review-exp" style="color: var(--ocean-dark);">Adventure & Nature</strong>
+                </div>
+                <div>
+                  <span style="font-size: 0.8rem; color: var(--muted-text); display: block;">Group Size</span>
+                  <strong id="review-travelers" style="color: var(--ocean-dark);">2 Persons</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wizard Controls -->
+        <div class="wizard-footer-controls">
+          <button type="button" class="btn btn-outline wizard-prev-btn" style="visibility: hidden;">← Previous</button>
+          <button type="button" class="btn btn-primary wizard-next-btn">Next Step →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: TRAVEL INSPIRATION (EDITORIAL STORY)
+       ========================================================================== -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="editorial-story-card">
+        <div class="editorial-img-col">
+          <img src="assets/images/hero-editorial.webp" alt="Traveler exploring scenic mountain landscape" loading="lazy" width="1200" height="800">
+        </div>
+        <div class="editorial-content-col">
+          <span class="section-tag tag-blue">Editorial Spotlight</span>
+          <h2 style="margin-bottom: 14px;">Go Somewhere You've Never Been</h2>
+          <div class="editorial-quote">
+            “Travel isn’t merely about crossing borders; it’s about discovering new ways to look at our world and ourselves.”
+          </div>
+          <p style="color: var(--muted-text); margin-bottom: 24px;">
+            Step away from routine and immerse yourself in the world’s most awe-inspiring landscapes. Whether that’s standing above the cloud line in the Alps or floating over historic valleys at dawn, the memories you make will stay with you forever.
+          </p>
+          <div>
+            <a href="destinations.html" class="btn btn-ocean">Discover Inspiring Journeys →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: SPECIAL OFFERS
+       ========================================================================== -->
+  <section class="section-spacing bg-white" id="offers">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-coral">Limited Season Specials</span>
+        <h2>Special Travel Offers</h2>
+        <p class="section-desc">Take advantage of our exclusive seasonal escapes, early bird promotions, and package bonuses.</p>
+      </div>
+
+      <div class="offers-grid">
+        <!-- Offer 1 -->
+        <div class="offer-card">
+          <span class="offer-badge">Save $300 Early Bird</span>
+          <div class="pkg-img-wrap">
+            <img src="assets/images/dest-cappadocia.webp" alt="Cappadocia Hot Air Balloons" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <div class="offer-validity">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              Valid for departures through Nov 2026
+            </div>
+            <h3 class="dest-title">Cappadocia Balloon Safari</h3>
+            <p class="dest-desc">Includes 4 nights cave hotel stay, sunrise hot air balloon flight, and private valley guides.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Promo Price</span>
+                <span class="dest-price">$980 <span style="font-size: 0.85rem; text-decoration: line-through; color: var(--muted-text); font-weight: normal;">$1,280</span></span>
+              </div>
+              <a href="booking.html?dest=Cappadocia" class="btn btn-primary btn-sm">Claim Offer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="offer-card">
+          <span class="offer-badge">Honeymoon Special</span>
+          <div class="pkg-img-wrap">
+            <img src="assets/images/dest-santorini.webp" alt="Santorini Greek Islands" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <div class="offer-validity">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              Includes complimentary champagne & sunset sail
+            </div>
+            <h3 class="dest-title">Santorini Cliffside Romance</h3>
+            <p class="dest-desc">5 Nights in Oia with private plunge pool, caldera views, and wine tasting tour.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Promo Price</span>
+                <span class="dest-price">$1,650 <span style="font-size: 0.85rem; text-decoration: line-through; color: var(--muted-text); font-weight: normal;">$1,950</span></span>
+              </div>
+              <a href="booking.html?dest=Santorini" class="btn btn-primary btn-sm">Claim Offer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offer 3 -->
+        <div class="offer-card">
+          <span class="offer-badge">Weekend Escape</span>
+          <div class="pkg-img-wrap">
+            <img src="assets/images/dest-rome.webp" alt="Rome Italy Historic Colosseum" loading="lazy" width="800" height="600">
+          </div>
+          <div class="dest-card-body">
+            <div class="offer-validity">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              Valid for Friday-to-Monday check-ins
+            </div>
+            <h3 class="dest-title">Rome Historic Getaway</h3>
+            <p class="dest-desc">3 Nights boutique hotel, skip-the-line Colosseum access, and authentic pasta masterclass.</p>
+            <div class="dest-footer">
+              <div>
+                <span class="dest-price-label">Promo Price</span>
+                <span class="dest-price">$620 <span style="font-size: 0.85rem; text-decoration: line-through; color: var(--muted-text); font-weight: normal;">$780</span></span>
+              </div>
+              <a href="booking.html?dest=Rome" class="btn btn-primary btn-sm">Claim Offer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: CUSTOMER REVIEWS (TESTIMONIAL SLIDER)
+       ========================================================================== -->
+  <section class="section-spacing bg-sand" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-blue">Real Traveler Stories</span>
+        <h2>What Our Guests Say</h2>
+        <p class="section-desc">Over 12,000 travelers trust Wanderlust every year for their dream adventures.</p>
+      </div>
+
+      <div class="testimonial-slider-container">
+        <div class="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="review-card">
+              <div class="review-avatar-wrap">
+                <img src="assets/images/avatar-1.webp" alt="Elena Rostova traveler avatar" width="300" height="300">
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">“Our Bali trip exceeded every expectation! From the seamless airport pickup to our secluded private pool villa in Ubud, Wanderlust curated every single detail with perfection.”</p>
+              <h4 class="reviewer-name">Elena Rostova</h4>
+              <span class="reviewer-trip">Visited Bali Tropical Escape (5 Days)</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="review-card">
+              <div class="review-avatar-wrap">
+                <img src="assets/images/avatar-2.webp" alt="David Miller traveler avatar" width="300" height="300">
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">“The Swiss Alps tour was simply breathtaking. The scenic rail pass and handpicked alpine hotels made traveling with my family completely effortless. We are already booking our next adventure!”</p>
+              <h4 class="reviewer-name">David & Sarah Miller</h4>
+              <span class="reviewer-trip">Visited Swiss Alpine Panorama (7 Days)</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="review-card">
+              <div class="review-avatar-wrap">
+                <img src="assets/images/avatar-3.webp" alt="Sophia Chen traveler avatar" width="300" height="300">
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">“The private overwater bungalow in the Maldives was heaven on earth. The 24/7 concierge team answered all questions in seconds. Truly a 5-star travel agency experience!”</p>
+              <h4 class="reviewer-name">Sophia Chen</h4>
+              <span class="reviewer-trip">Visited Maldives Overwater Sanctuary</span>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="testimonial-slide">
+            <div class="review-card">
+              <div class="review-avatar-wrap">
+                <img src="assets/images/avatar-4.webp" alt="Marcus Sterling traveler avatar" width="300" height="300">
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">“The Maasai Mara safari was the best trip of my life. Witnessing the Great Migration up close with our experienced guide was surreal. Flawless logistics throughout.”</p>
+              <h4 class="reviewer-name">Marcus Sterling</h4>
+              <span class="reviewer-trip">Visited Kenya Big Five Safari</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="slider-btn slider-prev" aria-label="Previous Testimonial">←</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn slider-next" aria-label="Next Testimonial">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+    <!-- NEW SECTION A: LIVE GLOBAL DEPARTURES & ACTIVITY -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-blue">Live Traveler Activity</span>
+        <h2>Recent Global Departures</h2>
+        <p class="section-desc">Join thousands of adventurers currently exploring handpicked destinations across the globe.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        <div style="background: var(--white); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: flex; gap: 14px; align-items: center;">
+          <span style="font-size: 2rem;">🌴</span>
+          <div>
+            <strong style="display: block; color: var(--ocean-dark); font-size: 0.95rem;">Liam & Sarah (London)</strong>
+            <span class="text-muted" style="font-size: 0.82rem;">Departed for Bali Tropical Escape • 2h ago</span>
+          </div>
+        </div>
+        <div style="background: var(--white); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: flex; gap: 14px; align-items: center;">
+          <span style="font-size: 2rem;">🏔</span>
+          <div>
+            <strong style="display: block; color: var(--ocean-dark); font-size: 0.95rem;">Dr. Robert H. (Toronto)</strong>
+            <span class="text-muted" style="font-size: 0.82rem;">Checked in to Zermatt Alpine Lodge • 4h ago</span>
+          </div>
+        </div>
+        <div style="background: var(--white); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: flex; gap: 14px; align-items: center;">
+          <span style="font-size: 2rem;">🏝</span>
+          <div>
+            <strong style="display: block; color: var(--ocean-dark); font-size: 0.95rem;">Elena & Mateo (Madrid)</strong>
+            <span class="text-muted" style="font-size: 0.82rem;">Landed at Malé Atoll, Maldives • 6h ago</span>
+          </div>
+        </div>
+        <div style="background: var(--white); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: flex; gap: 14px; align-items: center;">
+          <span style="font-size: 2rem;">🦁</span>
+          <div>
+            <strong style="display: block; color: var(--ocean-dark); font-size: 0.95rem;">The Chen Family (Sydney)</strong>
+            <span class="text-muted" style="font-size: 0.82rem;">Spotted Big Five in Kenya • Today</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION B: SUSTAINABILITY & CARBON-NEUTRAL PLEDGE -->
+  <section class="section-spacing bg-white">
+    <div class="container">
+      <div class="eco-pledge-card">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
+          <div>
+            <span class="section-tag tag-green" style="background: rgba(56,199,152,0.2); color: #4DE0AD;">Eco-Conscious Exploration</span>
+            <h2 style="color: var(--white); font-size: 2rem; margin: 12px 0;">Our Carbon-Neutral Travel Pledge</h2>
+            <p style="color: rgba(255,255,255,0.85); line-height: 1.65; margin-bottom: 20px;">
+              For every traveler that books with Stackly, we plant 10 indigenous mangrove trees, offset 100% of excursion ground transit emissions, and partner with local wildlife conservation reserves.
+            </p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+              <div><strong style="font-size: 1.4rem; color: #4DE0AD; display: block;">124,000+</strong><span style="font-size: 0.85rem; color: #94A3B8;">Trees Planted</span></div>
+              <div><strong style="font-size: 1.4rem; color: #4DE0AD; display: block;">100%</strong><span style="font-size: 0.85rem; color: #94A3B8;">Plastic-Free Tours</span></div>
+              <div><strong style="font-size: 1.4rem; color: #4DE0AD; display: block;">$250K+</strong><span style="font-size: 0.85rem; color: #94A3B8;">Local Community Fund</span></div>
+            </div>
+          </div>
+          <div style="background: rgba(255,255,255,0.06); padding: 28px; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.15);">
+            <h4 style="color: var(--white); margin-bottom: 12px;">🌿 Certified Sustainable Operations</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 16px;">
+              We hold Gold Tier certification from Global Sustainable Tourism Council (GSTC) and adhere strictly to Leave No Trace principles worldwide.
+            </p>
+            <a href="about.html" class="btn btn-pill-mint btn-sm">Read Sustainability Report →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pre-footer-cta">
+    <div class="container">
+      <h2>Join thousands of proactive travelers and families discovering the world with clean, modern travel clarity.</h2>
+      <div class="pre-footer-buttons">
+        <a href="destinations.html" class="btn-pill-mint">Start Exploring Free</a>
+        <a href="booking.html" class="btn-pill-dark">Create a Custom Trip</a>
+        <a href="packages.html" class="btn-pill-dark">View Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STACKLY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px;" aria-label="Stackly Travel Home">
+            <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="144" height="57">
+          </a>
+          <p>Mobilizing intelligent travel discovery, curated destination escapes, bespoke luxury packages, and personalized trip planning for modern life.</p>
+                    <div class="footer-social-row">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="X / Twitter">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="destinations.html">Destinations Catalog</a>
+            <a href="packages.html">Travel Packages</a>
+            <a href="hotels.html">Hotels & Resorts</a>
+            <a href="tour-details.html">Tour Details</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms & Agreements</a>
+            <a href="404.html">Security & Insurance</a>
+            <a href="destination-details.html">Destination Guides</a>
+            <a href="contact.html#faq">FAQ & Help Center</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-desc">Get quarterly travel updates, smart expedition alerts, and curated destination reports.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Travel updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved. Designed for travel clarity and unforgettable global journeys.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

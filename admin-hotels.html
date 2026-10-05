@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Partner Hotels Management - Stackly Agency Admin Portal. Manage contracted resorts, room allocations, nightly rates, and concierge contacts.">
+  <title>Partner Hotels | Stackly Agency Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="admin-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+          <span style="font-size: 0.72rem; background: var(--coral-accent); color: var(--white); padding: 2px 6px; border-radius: 4px; margin-left: 6px; font-weight: 700;">ADMIN</span>
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- Admin User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Operations Lead • Stackly Admin</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="admin-bookings.html" class="sidebar-link">
+          <span>📑</span> Bookings Management <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">12</span>
+        </a>
+        <a href="admin-destinations.html" class="sidebar-link">
+          <span>📍</span> Destinations (124)
+        </a>
+        <a href="admin-packages.html" class="sidebar-link">
+          <span>📦</span> Tour Packages (48)
+        </a>
+        <a href="admin-hotels.html" class="sidebar-link active">
+          <span>🏨</span> Partner Hotels (86)
+        </a>
+        <a href="admin-guides.html" class="sidebar-link">
+          <span>🧭</span> Field Guides & Drivers
+        </a>
+        <a href="admin-customers.html" class="sidebar-link">
+          <span>👥</span> Customers (9,850)
+        </a>
+        <a href="admin-reviews.html" class="sidebar-link">
+          <span>⭐</span> Guest Reviews (4.9★)
+        </a>
+        <a href="admin-reports.html" class="sidebar-link">
+          <span>📈</span> Financial Reports
+        </a>
+        <a href="admin-messages.html" class="sidebar-link">
+          <span>✉️</span> Inquiries & Messages
+        </a>
+        <a href="admin-settings.html" class="sidebar-link">
+          <span>⚙️</span> Portal Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Exit Admin
+        </a>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Toggle admin sidebar" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">Partner Hotels & Luxury Resorts</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">86 Contracted 5-Star Partner Accommodations</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">+ Add Partner Hotel</button>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/team-1.webp" alt="Admin Julianne" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--sky-blue);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.88rem; color: var(--ocean-dark);">Julianne Vance</strong>
+              <span style="font-size: 0.72rem; color: var(--muted-text);">Operations Director</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="dashboard-body">
+        
+        <div class="data-table-card">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <h3 style="font-size: 1.15rem; margin: 0;">Active Partner Properties</h3>
+            <input type="search" placeholder="Search hotel name or city..." class="form-control" style="width: 100%; max-width: 280px; padding: 6px 12px; font-size: 0.85rem;">
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Hotel Property</th>
+                  <th>Location</th>
+                  <th>Category</th>
+                  <th>Contract Rate</th>
+                  <th>Inventory Allocated</th>
+                  <th>Rating</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/hotel-1.webp" alt="Viceroy Ubud" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <div>
+                        <strong>Viceroy Ubud Bali</strong>
+                        <span style="display: block; font-size: 0.76rem; color: var(--muted-text);">Private Pool Villas</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Ubud, Bali (Indonesia)</td>
+                  <td>5-Star Luxury Resort</td>
+                  <td>$420 / night</td>
+                  <td>14 Rooms / Day</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 4.9</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Manage</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/hotel-2.webp" alt="The Chedi Andermatt" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <div>
+                        <strong>The Chedi Andermatt</strong>
+                        <span style="display: block; font-size: 0.76rem; color: var(--muted-text);">Alpine Luxury Suites</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Andermatt, Switzerland</td>
+                  <td>5-Star Ski & Wellness</td>
+                  <td>$680 / night</td>
+                  <td>8 Rooms / Day</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 5.0</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Manage</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/hotel-3.webp" alt="Soneva Jani" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <div>
+                        <strong>Soneva Jani Overwater</strong>
+                        <span style="display: block; font-size: 0.76rem; color: var(--muted-text);">Water Retreats with Slide</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Noonu Atoll, Maldives</td>
+                  <td>Ultra-Luxury Island</td>
+                  <td>$1,250 / night</td>
+                  <td>6 Villas / Day</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 5.0</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Manage</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <img src="assets/images/hotel-4.webp" alt="Grace Hotel" style="width: 44px; height: 34px; border-radius: 6px; object-fit: cover;">
+                      <div>
+                        <strong>Grace Hotel Auberge</strong>
+                        <span style="display: block; font-size: 0.76rem; color: var(--muted-text);">Caldera Cliffside Suites</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Imerovigli, Santorini (Greece)</td>
+                  <td>Boutique Luxury</td>
+                  <td>$590 / night</td>
+                  <td>10 Suites / Day</td>
+                  <td><span style="color: #F59E0B; font-weight: 700;">★ 4.9</span></td>
+                  <td><button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Manage</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

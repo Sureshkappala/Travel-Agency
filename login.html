@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your Stackly Travel account or Agency Admin portal to manage itineraries, bookings, and travel operations.">
+  <title>Account Login | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--sand-warm);">
+
+  <!-- Standalone Authentication Layout (No Navbar) -->
+  <main class="auth-standalone-wrapper">
+    
+    <!-- Top Navigation Bar -->
+    <div class="auth-top-nav">
+      <a href="index.html" class="auth-back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+
+    <!-- Centered Brand Logo -->
+    <div class="auth-brand-header">
+      <a href="index.html" aria-label="Stackly Travel Home">
+        <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="160" height="63">
+      </a>
+    </div>
+
+    <!-- Login Card -->
+    <div class="auth-card">
+      <div class="text-center" style="margin-bottom: 24px;">
+        <span class="section-tag tag-coral">Secure Sign In</span>
+        <h2 style="font-size: 1.75rem; margin: 8px 0 4px;">Welcome Back</h2>
+        <p class="text-muted" style="font-size: 0.9rem;" id="login-subtext">Select your role to access your personalized travel dashboard.</p>
+      </div>
+
+      <form id="login-form" novalidate>
+        
+        <!-- Role Selection -->
+        <div class="role-selector-wrap">
+          <label class="role-selector-label">Select Account Role *</label>
+          <div class="role-selector-grid">
+            
+            <!-- Customer / Traveler Role -->
+            <div>
+              <input type="radio" name="auth-role" id="role-customer" value="customer" class="role-radio-input" checked>
+              <label for="role-customer" class="role-card-label">
+                <span class="role-icon">🧳</span>
+                <span class="role-title">Traveler</span>
+                <span class="role-subtitle">Customer Portal</span>
+              </label>
+            </div>
+
+            <!-- Admin / Agency Role -->
+            <div>
+              <input type="radio" name="auth-role" id="role-admin" value="admin" class="role-radio-input">
+              <label for="role-admin" class="role-card-label">
+                <span class="role-icon">🏢</span>
+                <span class="role-title">Agency Admin</span>
+                <span class="role-subtitle">Manager Portal</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group login-email-group">
+          <label for="login-email">Email Address *</label>
+          <input type="email" id="login-email" class="form-control" placeholder="traveler@wanderlust.com" value="traveler@wanderlust.com" required>
+          <span class="form-error">Please enter a valid email address.</span>
+        </div>
+
+        <!-- Password Field with Eye Toggle -->
+        <div class="form-group login-pass-group">
+          <label for="login-pass">Password *</label>
+          <div class="password-input-wrap">
+            <input type="password" id="login-pass" class="form-control" placeholder="Enter your password" value="Travel2026!" required>
+            <span class="password-toggle-btn" title="Toggle password visibility">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </span>
+          </div>
+          <span class="form-error">Password must be at least 6 characters long.</span>
+        </div>
+
+        <!-- Remember Me Checkbox & Forgot Password Downside -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; flex-wrap: wrap; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="remember-me" checked style="accent-color: var(--coral-accent); width: 16px; height: 16px; cursor: pointer;">
+            <label for="remember-me" style="font-size: 0.88rem; color: var(--body-text); cursor: pointer; margin-bottom: 0;">Remember me</label>
+          </div>
+          <a href="404.html" style="font-size: 0.85rem; color: var(--coral-accent); font-weight: 600;">Forgot Password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="login-submit-btn" class="btn btn-primary btn-lg" style="width: 100%; margin-bottom: 18px;">Sign In as Traveler →</button>
+
+        <div class="text-center" style="font-size: 0.92rem; color: var(--muted-text);">
+          Don't have an account yet? <a href="register.html" style="color: var(--coral-accent); font-weight: 700;">Create Account</a>
+        </div>
+
+        <div id="login-hint-box" style="margin-top: 18px; padding: 12px; background: var(--sand-warm); border-radius: var(--radius-sm); font-size: 0.8rem; text-align: center; color: var(--muted-text); border: 1px dashed var(--border-color);">
+          💡 <strong>Traveler Demo:</strong> Submitting will sign you directly into the <strong>Customer Travel Dashboard</strong>.
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

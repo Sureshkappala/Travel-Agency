@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Travel Agency Admin Portal - Operational metrics, customer bookings, destination management, and revenue analytics.">
+  <title>Agency Admin Portal | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="admin-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+          <span style="font-size: 0.72rem; background: var(--coral-accent); color: var(--white); padding: 2px 6px; border-radius: 4px; margin-left: 6px; font-weight: 700;">ADMIN</span>
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Admin User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Operations Lead • Stackly Admin</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sidebar-link active">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="admin-bookings.html" class="sidebar-link">
+          <span>📑</span> Bookings Management <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">12</span>
+        </a>
+        <a href="admin-destinations.html" class="sidebar-link">
+          <span>📍</span> Destinations (124)
+        </a>
+        <a href="admin-packages.html" class="sidebar-link">
+          <span>📦</span> Tour Packages (48)
+        </a>
+        <a href="admin-hotels.html" class="sidebar-link">
+          <span>🏨</span> Partner Hotels (86)
+        </a>
+        <a href="admin-guides.html" class="sidebar-link">
+          <span>🧭</span> Field Guides & Drivers
+        </a>
+        <a href="admin-customers.html" class="sidebar-link">
+          <span>👥</span> Customers (9,850)
+        </a>
+        <a href="admin-reviews.html" class="sidebar-link">
+          <span>⭐</span> Guest Reviews (4.9★)
+        </a>
+        <a href="admin-reports.html" class="sidebar-link">
+          <span>📈</span> Financial Reports
+        </a>
+        <a href="admin-messages.html" class="sidebar-link">
+          <span>✉️</span> Inquiries & Messages
+        </a>
+        <a href="admin-settings.html" class="sidebar-link">
+          <span>⚙️</span> Portal Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Exit Admin
+        </a>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="dashboard-drawer-btn" aria-label="Toggle admin sidebar" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0; font-weight: 700;">Welcome Back, Kappalasuresh92! 👏</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">October 2026 • Stackly Cloud Agency Console</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="user-dashboard.html" class="btn btn-outline btn-sm hide-mobile" style="background: var(--white); font-weight: 600;">Switch to Traveler Portal</a>
+          <a href="admin-bookings.html" class="btn btn-primary btn-sm">+ Quick Action</a>
+          <a href="admin-messages.html" class="topbar-bell-btn" title="Messages & Inquiries" aria-label="Messages & Inquiries">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span class="topbar-bell-dot"></span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Admin Content Area -->
+      <main class="dashboard-body" id="admin-overview">
+        
+        <!-- Welcome Credentials Banner Card -->
+        <div class="welcome-credentials-banner">
+          <h2>Welcome back, Kappalasuresh92 👏</h2>
+          <div class="credentials-pills-row">
+            <div class="cred-pill"><span>👤</span> Name: <strong>Kappalasuresh92</strong></div>
+            <div class="cred-pill"><span>✉️</span> Email: <strong>kappalasuresh92@gmail.com</strong></div>
+            <div class="cred-pill"><span>🛡️</span> Role: <strong>Agency Operations Director</strong></div>
+            <div class="cred-pill-status">🟢 ACTIVE SESSION</div>
+          </div>
+          <div class="welcome-actions-row">
+            <a href="admin-settings.html" class="btn btn-outline-white btn-sm">Portal Settings</a>
+            <a href="admin-bookings.html" class="btn btn-primary btn-sm">+ Manage Bookings</a>
+          </div>
+        </div>
+        
+        <!-- 6 Core Stat Cards -->
+        <div class="stat-cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+          
+          <div class="stat-card">
+            <div>
+              <span class="text-muted" style="font-size: 0.82rem; font-weight: 600;">Total Bookings</span>
+              <div class="stat-val">1,428</div>
+            </div>
+            <div class="stat-icon-wrap" style="background: var(--sky-light); color: var(--sky-blue);">📑</div>
+          </div>
+
+          <div class="stat-card">
+            <div>
+              <span class="text-muted" style="font-size: 0.82rem; font-weight: 600;">Active Customers</span>
+              <div class="stat-val">9,850</div>
+            </div>
+            <div class="stat-icon-wrap" style="background: var(--tropical-light); color: var(--tropical-green);">👥</div>
+          </div>
+
+          <div class="stat-card">
+            <div>
+              <span class="text-muted" style="font-size: 0.82rem; font-weight: 600;">Global Destinations</span>
+              <div class="stat-val">124</div>
+            </div>
+            <div class="stat-icon-wrap" style="background: var(--coral-light); color: var(--coral-accent);">📍</div>
+          </div>
+
+          <div class="stat-card">
+            <div>
+              <span class="text-muted" style="font-size: 0.82rem; font-weight: 600;">Tour Packages</span>
+              <div class="stat-val">48</div>
+            </div>
+            <div class="stat-icon-wrap" style="background: #FEF3C7; color: #D97706;">📦</div>
+          </div>
+
+          <div class="stat-card">
+            <div>
+              <span class="text-muted" style="font-size: 0.82rem; font-weight: 600;">Active Tours Now</span>
+              <div class="stat-val">32</div>
+            </div>
+            <div class="stat-icon-wrap" style="background: #E0E7FF; color: #4338CA;">✈️</div>
+          </div>
+
+          <div class="stat-card">
+            <div>
+              <span class="text-muted" style="font-size: 0.82rem; font-weight: 600;">YTD Gross Revenue</span>
+              <div class="stat-val" style="color: var(--tropical-green);">$1.84M</div>
+            </div>
+            <div class="stat-icon-wrap" style="background: #DCFCE7; color: #16A34A;">💰</div>
+          </div>
+
+        </div>
+
+        <!-- Revenue Chart Card & Popular Destinations Split Grid -->
+        <div class="dashboard-grid-split">
+          
+          <!-- Monthly Revenue Trend Chart (HTML5 Canvas) -->
+          <div class="dash-chart-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <h3 style="font-size: 1.15rem; margin: 0;">2026 Monthly Booking Revenue Trend</h3>
+                <span style="font-size: 0.82rem; color: var(--muted-text);">All figures in USD ($) • Updated real-time</span>
+              </div>
+              <span class="badge badge-green">+24.5% vs 2025</span>
+            </div>
+
+            <div style="width: 100%; height: 240px; position: relative;">
+              <canvas id="admin-revenue-chart" style="width: 100%; height: 100%;"></canvas>
+            </div>
+          </div>
+
+          <!-- Top Performing Destinations -->
+          <div class="bg-white" style="border-radius: var(--radius-lg); padding: 24px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <h3 style="font-size: 1.15rem; margin-bottom: 16px;">Top Destinations by Volume</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px;">
+                  <span>1. Bali, Indonesia</span>
+                  <span>420 Bookings</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: var(--sand-warm); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 88%; height: 100%; background: var(--coral-accent);"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px;">
+                  <span>2. Swiss Alps, Switzerland</span>
+                  <span>340 Bookings</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: var(--sand-warm); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 74%; height: 100%; background: var(--sky-blue);"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px;">
+                  <span>3. Maldives Atoll</span>
+                  <span>295 Bookings</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: var(--sand-warm); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 65%; height: 100%; background: var(--tropical-green);"></div>
+                </div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px;">
+                  <span>4. Dubai Luxury & Safari</span>
+                  <span>210 Bookings</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: var(--sand-warm); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 52%; height: 100%; background: #F59E0B;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Recent Real-Time Bookings Table -->
+        <div class="data-table-card" id="admin-bookings">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <h3 style="font-size: 1.15rem; margin: 0;">Recent Client Bookings</h3>
+              <p class="text-muted" style="font-size: 0.82rem; margin-top: 4px;">Manage confirmed itineraries, client contact records, and guide assignments.</p>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="badge badge-blue">Filter: All</span>
+              <span class="badge badge-green">Confirmed (12)</span>
+              <span class="badge badge-coral">Pending Guide (3)</span>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Booking Reference</th>
+                  <th>Customer Name</th>
+                  <th>Package & Destination</th>
+                  <th>Departure Date</th>
+                  <th>Travelers</th>
+                  <th>Revenue</th>
+                  <th>Operations Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="font-family: monospace;">WAN-847291</strong></td>
+                  <td>Eleanor Vance (eleanor@example.com)</td>
+                  <td>Bali Tropical Escape</td>
+                  <td>Nov 15, 2026</td>
+                  <td>2 Guests</td>
+                  <td><strong>$1,994</strong></td>
+                  <td><span class="badge badge-green">Confirmed & Assigned</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace;">WAN-934812</strong></td>
+                  <td>Dr. Robert Hayes (rhayes@med.org)</td>
+                  <td>Swiss Alps Panorama Tour</td>
+                  <td>Dec 04, 2026</td>
+                  <td>4 Guests</td>
+                  <td><strong>$9,800</strong></td>
+                  <td><span class="badge badge-green">Confirmed & Assigned</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace;">WAN-781043</strong></td>
+                  <td>Sophia & Liam Thorne (thorne@vip.co)</td>
+                  <td>Maldives Overwater Sanctuary</td>
+                  <td>Jan 12, 2027</td>
+                  <td>2 Guests</td>
+                  <td><strong>$3,900</strong></td>
+                  <td><span class="badge badge-coral">Guide Pending</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace;">WAN-615290</strong></td>
+                  <td>Marcus Chen (marcus.c@tech.io)</td>
+                  <td>Dubai Desert & City Lights</td>
+                  <td>Feb 20, 2027</td>
+                  <td>1 Guest</td>
+                  <td><strong>$1,250</strong></td>
+                  <td><span class="badge badge-green">Confirmed & Assigned</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Active Field Guides & Driver Dispatch -->
+        <div class="data-table-card" id="admin-coordinators">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="font-size: 1.15rem; margin: 0;">On-The-Ground Expedition Dispatch</h3>
+              <p class="text-muted" style="font-size: 0.82rem; margin-top: 4px;">Live tracking of certified local guides and private chauffeurs.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="alert('All GPS coordinator signals verified active and online.');">+ Ping All Dispatch</button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Field Host</th>
+                  <th>Location Region</th>
+                  <th>Role</th>
+                  <th>Active Guest Group</th>
+                  <th>GPS / Signal</th>
+                  <th>Direct Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Wayan Sukarta</strong></td>
+                  <td>Bali (Ubud & Jimbaran)</td>
+                  <td>Senior Cultural Guide</td>
+                  <td>Vance Party (WAN-847291)</td>
+                  <td><span class="badge badge-green">🟢 Online & Stationed</span></td>
+                  <td>+62 812-555-0982</td>
+                </tr>
+                <tr>
+                  <td><strong>Ketut Ardi</strong></td>
+                  <td>Bali (Denpasar DPS)</td>
+                  <td>Private Chauffeur Host</td>
+                  <td>Airport Chauffeur VIP</td>
+                  <td><span class="badge badge-green">🟢 Online & Active</span></td>
+                  <td>+62 813-555-4421</td>
+                </tr>
+                <tr>
+                  <td><strong>Hans Meier</strong></td>
+                  <td>Zermatt & Lucerne</td>
+                  <td>Alpine Trek Specialist</td>
+                  <td>Hayes Group (WAN-934812)</td>
+                  <td><span class="badge badge-blue">🔵 In Transit (Cableway)</span></td>
+                  <td>+41 79-555-8812</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

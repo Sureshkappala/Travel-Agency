@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guest Reviews Moderation - Stackly Agency Admin Portal. Review traveler testimonials, approve feedback, and reply to client inquiries.">
+  <title>Guest Reviews | Stackly Agency Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Admin Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="Admin Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="admin-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+          <span style="font-size: 0.72rem; background: var(--coral-accent); color: var(--white); padding: 2px 6px; border-radius: 4px; margin-left: 6px; font-weight: 700;">ADMIN</span>
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- Admin User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Operations Lead • Stackly Admin</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="admin-bookings.html" class="sidebar-link">
+          <span>📑</span> Bookings Management <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">12</span>
+        </a>
+        <a href="admin-destinations.html" class="sidebar-link">
+          <span>📍</span> Destinations (124)
+        </a>
+        <a href="admin-packages.html" class="sidebar-link">
+          <span>📦</span> Tour Packages (48)
+        </a>
+        <a href="admin-hotels.html" class="sidebar-link">
+          <span>🏨</span> Partner Hotels (86)
+        </a>
+        <a href="admin-guides.html" class="sidebar-link">
+          <span>🧭</span> Field Guides & Drivers
+        </a>
+        <a href="admin-customers.html" class="sidebar-link">
+          <span>👥</span> Customers (9,850)
+        </a>
+        <a href="admin-reviews.html" class="sidebar-link active">
+          <span>⭐</span> Guest Reviews (4.9★)
+        </a>
+        <a href="admin-reports.html" class="sidebar-link">
+          <span>📈</span> Financial Reports
+        </a>
+        <a href="admin-messages.html" class="sidebar-link">
+          <span>✉️</span> Inquiries & Messages
+        </a>
+        <a href="admin-settings.html" class="sidebar-link">
+          <span>⚙️</span> Portal Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Exit Admin
+        </a>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Toggle admin sidebar" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">Guest Reviews & Ratings</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">4.9 / 5.0 Average Across 1,280 Verified Traveler Reviews</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <span class="badge badge-green hide-mobile">98% Satisfaction</span>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/team-1.webp" alt="Admin Julianne" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--sky-blue);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.88rem; color: var(--ocean-dark);">Julianne Vance</strong>
+              <span style="font-size: 0.72rem; color: var(--muted-text);">Operations Director</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="dashboard-body">
+        
+        <div class="data-table-card">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <h3 style="font-size: 1.15rem; margin: 0;">Verified Traveler Testimonials</h3>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-primary btn-sm">All Reviews (1,280)</button>
+              <button class="btn btn-outline btn-sm">Pending Approval (3)</button>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column;">
+            
+            <!-- Review 1 -->
+            <div style="padding: 22px 24px; border-bottom: 1px solid var(--border-color); background: var(--white);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <img src="assets/images/avatar-1.webp" alt="Eleanor Vance" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover;">
+                  <div>
+                    <strong style="font-size: 0.95rem; color: var(--ocean-dark);">Eleanor Vance</strong>
+                    <span style="font-size: 0.78rem; color: var(--muted-text); display: block;">Swiss Alps Panorama (Sep 2025)</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #F59E0B; font-weight: 700;">★★★★★ 5.0</span>
+                  <span class="badge badge-green">Published</span>
+                </div>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--body-text); line-height: 1.6; margin-bottom: 12px;">
+                "Our trip through Zermatt and Interlaken was flawlessly orchestrated. The Glacier Express panoramic carriage reservations, private mountain guides, and boutique chalets exceeded all expectations!"
+              </p>
+              <div style="display: flex; gap: 10px;">
+                <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Reply to Eleanor</button>
+                <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Feature on Homepage</button>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div style="padding: 22px 24px; border-bottom: 1px solid var(--border-color); background: var(--white);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <img src="assets/images/avatar-2.webp" alt="Marcus Sterling" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover;">
+                  <div>
+                    <strong style="font-size: 0.95rem; color: var(--ocean-dark);">Marcus Sterling</strong>
+                    <span style="font-size: 0.78rem; color: var(--muted-text); display: block;">Maldives Atoll Sanctuary (Aug 2025)</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #F59E0B; font-weight: 700;">★★★★★ 5.0</span>
+                  <span class="badge badge-green">Published</span>
+                </div>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--body-text); line-height: 1.6; margin-bottom: 12px;">
+                "From the VIP seaplane welcome in Malé to the sunset dolphin cruise and private overwater pool villa, Stackly delivered an immaculate honeymoon vacation."
+              </p>
+              <div style="display: flex; gap: 10px;">
+                <button class="btn btn-outline btn-sm" onclick="window.location.href='404.html'">Reply to Marcus</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

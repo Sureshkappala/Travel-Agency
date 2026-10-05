@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a Stackly Travel account to receive exclusive member rates, early tour access, and personalized itinerary planning.">
+  <title>Create an Account | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--sand-warm);">
+
+  <!-- Standalone Authentication Layout (No Navbar) -->
+  <main class="auth-standalone-wrapper">
+    
+    <!-- Top Navigation Bar -->
+    <div class="auth-top-nav">
+      <a href="index.html" class="auth-back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+
+    <!-- Centered Brand Logo -->
+    <div class="auth-brand-header">
+      <a href="index.html" aria-label="Stackly Travel Home">
+        <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="160" height="63">
+      </a>
+    </div>
+
+    <!-- Register Card -->
+    <div class="auth-card" style="max-width: 520px;">
+      <div class="text-center" style="margin-bottom: 24px;">
+        <span class="section-tag tag-green">Start Exploring</span>
+        <h2 style="font-size: 1.75rem; margin: 8px 0 4px;">Create Your Account</h2>
+        <p class="text-muted" style="font-size: 0.9rem;" id="reg-subtext">Choose your registration role to set up your account.</p>
+      </div>
+
+      <form id="register-form" novalidate>
+        
+        <!-- Role Selection -->
+        <div class="role-selector-wrap">
+          <label class="role-selector-label">Select Account Role *</label>
+          <div class="role-selector-grid">
+            
+            <!-- Customer / Traveler Role -->
+            <div>
+              <input type="radio" name="reg-role" id="reg-role-customer" value="customer" class="role-radio-input" checked>
+              <label for="reg-role-customer" class="role-card-label">
+                <span class="role-icon">🧳</span>
+                <span class="role-title">Traveler</span>
+                <span class="role-subtitle">Customer Portal</span>
+              </label>
+            </div>
+
+            <!-- Admin / Agency Role -->
+            <div>
+              <input type="radio" name="reg-role" id="reg-role-admin" value="admin" class="role-radio-input">
+              <label for="reg-role-admin" class="role-card-label">
+                <span class="role-icon">🏢</span>
+                <span class="role-title">Agency Admin</span>
+                <span class="role-subtitle">Manager Portal</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="reg-name">Full Name *</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="e.g. Maya Lin" pattern="^[a-zA-Z\s\.\'\-]+$" title="Please enter a valid name (letters only, no numbers)." required>
+          <span class="form-error">Please enter a valid full name (letters only, no numbers).</span>
+        </div>
+
+        <!-- Email & Mobile -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-email">Email Address *</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="maya@example.com" required>
+            <span class="form-error">Valid email required.</span>
+          </div>
+          <div class="form-group">
+            <label for="reg-phone">Mobile Number *</label>
+            <input type="tel" id="reg-phone" class="form-control" placeholder="+1 (555) 000-0000" pattern="^[\d\+\-\(\)\s]{7,20}$" title="Please enter a valid phone number (digits only, no letters)." required>
+            <span class="form-error">Please enter a valid phone number (digits only, no letters).</span>
+          </div>
+        </div>
+
+        <!-- Passwords -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-pass">Password *</label>
+            <input type="password" id="reg-pass" class="form-control" placeholder="At least 6 chars" required minlength="6">
+            <span class="form-error">Password must be at least 6 characters.</span>
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm-pass">Confirm Password *</label>
+            <input type="password" id="reg-confirm-pass" class="form-control" placeholder="Confirm password" required>
+            <span class="form-error">Passwords must match.</span>
+          </div>
+        </div>
+
+        <!-- Preferred Travel Type / Agency Department -->
+        <div class="form-group" id="reg-type-group">
+          <label for="reg-travel-type" id="reg-type-label">Preferred Travel Style</label>
+          <select id="reg-travel-type" class="form-control">
+            <option value="couple">Couple / Romantic Escapes</option>
+            <option value="adventure">Adventure & Trekking</option>
+            <option value="luxury">Luxury Stays & Private Villas</option>
+            <option value="family">Family Vacations</option>
+            <option value="solo">Solo Cultural Expeditions</option>
+          </select>
+        </div>
+
+        <!-- Terms & Conditions Checkbox -->
+        <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 22px;">
+          <input type="checkbox" id="reg-terms" checked required style="accent-color: var(--coral-accent); width: 16px; height: 16px; margin-top: 4px; cursor: pointer;">
+          <label for="reg-terms" style="font-size: 0.85rem; color: var(--body-text); cursor: pointer;">
+            I agree to the <a href="404.html" style="color: var(--coral-accent); text-decoration: underline;">Terms & Conditions</a> and <a href="404.html" style="color: var(--coral-accent); text-decoration: underline;">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="reg-submit-btn" class="btn btn-primary btn-lg" style="width: 100%; margin-bottom: 18px;">Create Traveler Account →</button>
+
+        <div class="text-center" style="font-size: 0.92rem; color: var(--muted-text);">
+          Already registered? <a href="login.html" style="color: var(--coral-accent); font-weight: 700;">Sign In Here</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saved Destinations - Stackly Travel Customer Hub. Bookmark dream vacations, get price drop alerts, and plan your next custom itinerary.">
+  <title>Saved Destinations | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="User Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="user-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Explorer Traveler • Stackly</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="user-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="user-trips.html" class="sidebar-link">
+          <span>✈️</span> My Upcoming Trips
+        </a>
+        <a href="user-bookings.html" class="sidebar-link">
+          <span>📑</span> All Bookings
+        </a>
+        <a href="user-wishlist.html" class="sidebar-link active">
+          <span>♥</span> Saved Destinations
+        </a>
+        <a href="user-documents.html" class="sidebar-link">
+          <span>📄</span> Travel Documents
+        </a>
+        <a href="user-notifications.html" class="sidebar-link">
+          <span>🔔</span> Notifications <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">2</span>
+        </a>
+        <a href="user-profile.html" class="sidebar-link">
+          <span>👤</span> Traveler Profile
+        </a>
+        <a href="user-settings.html" class="sidebar-link">
+          <span>⚙️</span> Account Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Sign Out
+        </a>
+      </div>
+    
+
+    <!-- Dashboard Main Content Area -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar Header -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Open sidebar menu" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">Saved Wishlist Destinations</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">Your bookmarked dream escapes with instant booking and seasonal rate alerts.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <a href="destinations.html" class="btn btn-primary btn-sm">+ Explore Destinations</a>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/avatar-1.webp" alt="Eleanor Vance" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coral-accent);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.9rem; color: var(--ocean-dark);">Eleanor Vance</strong>
+              <span style="font-size: 0.75rem; color: var(--muted-text);">Explorer Tier Member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Body -->
+      <main class="dashboard-body">
+        
+        <!-- Wishlist Grid (6 Saved Destinations) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+          
+          <!-- Item 1 -->
+          <div style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="position: relative;">
+              <img src="assets/images/dest-maldives.webp" alt="Maldives Sanctuary" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+              <span class="badge badge-coral" style="position: absolute; top: 12px; left: 12px; box-shadow: var(--shadow-sm);">Price Drop: -15%</span>
+              <button style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #F87171; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" title="Remove from wishlist">♥</button>
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; color: var(--muted-text); text-transform: uppercase;">South Ari Atoll</span>
+                <span style="color: #F59E0B; font-weight: 700; font-size: 0.88rem;">★ 4.9 (128)</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Maldives Atoll Overwater Sanctuary</h3>
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px; flex: 1;">Private overwater villas, bioluminescent beach dinners, and seaplane transfers.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--muted-text); display: block;">Starting from</span>
+                  <strong style="font-size: 1.15rem; color: var(--coral-accent);">$1,950</strong> <span style="font-size: 0.78rem; color: var(--muted-text);">/ person</span>
+                </div>
+                <a href="booking.html?package=maldives-getaway" class="btn btn-primary btn-sm">Book Escape</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="position: relative;">
+              <img src="assets/images/dest-cappadocia.webp" alt="Cappadocia Turkey" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+              <button style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #F87171; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" title="Remove from wishlist">♥</button>
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; color: var(--muted-text); text-transform: uppercase;">Nevsehir, Turkey</span>
+                <span style="color: #F59E0B; font-weight: 700; font-size: 0.88rem;">★ 4.8 (94)</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Cappadocia Hot Air Balloon Safari</h3>
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px; flex: 1;">Sunrise hot air balloon rides over fairy chimneys and ancient cave boutique stays.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--muted-text); display: block;">Starting from</span>
+                  <strong style="font-size: 1.15rem; color: var(--coral-accent);">$980</strong> <span style="font-size: 0.78rem; color: var(--muted-text);">/ person</span>
+                </div>
+                <a href="booking.html?dest=cappadocia" class="btn btn-primary btn-sm">Book Escape</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="position: relative;">
+              <img src="assets/images/dest-santorini.webp" alt="Santorini Caldera" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+              <span class="badge badge-blue" style="position: absolute; top: 12px; left: 12px; box-shadow: var(--shadow-sm);">Popular Season</span>
+              <button style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #F87171; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" title="Remove from wishlist">♥</button>
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; color: var(--muted-text); text-transform: uppercase;">Cyclades, Greece</span>
+                <span style="color: #F59E0B; font-weight: 700; font-size: 0.88rem;">★ 4.9 (210)</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Santorini Caldera Romance & Wine</h3>
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px; flex: 1;">Whitewashed cliffside infinity suites overlooking Aegean sunsets and volcanic vineyards.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--muted-text); display: block;">Starting from</span>
+                  <strong style="font-size: 1.15rem; color: var(--coral-accent);">$1,450</strong> <span style="font-size: 0.78rem; color: var(--muted-text);">/ person</span>
+                </div>
+                <a href="booking.html?dest=santorini" class="btn btn-primary btn-sm">Book Escape</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="position: relative;">
+              <img src="assets/images/pkg-iceland-aurora.webp" alt="Iceland Aurora" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+              <button style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #F87171; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" title="Remove from wishlist">♥</button>
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; color: var(--muted-text); text-transform: uppercase;">Reykjavik, Iceland</span>
+                <span style="color: #F59E0B; font-weight: 700; font-size: 0.88rem;">★ 4.9 (82)</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Iceland Northern Lights & Glaciers</h3>
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px; flex: 1;">Chasing aurora borealis, thermal Blue Lagoon baths, and crystal ice cave expeditions.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--muted-text); display: block;">Starting from</span>
+                  <strong style="font-size: 1.15rem; color: var(--coral-accent);">$2,250</strong> <span style="font-size: 0.78rem; color: var(--muted-text);">/ person</span>
+                </div>
+                <a href="booking.html?package=iceland-aurora" class="btn btn-primary btn-sm">Book Escape</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="position: relative;">
+              <img src="assets/images/pkg-safari-kenya.webp" alt="Kenya Safari" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+              <button style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #F87171; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" title="Remove from wishlist">♥</button>
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; color: var(--muted-text); text-transform: uppercase;">Masai Mara, Kenya</span>
+                <span style="color: #F59E0B; font-weight: 700; font-size: 0.88rem;">★ 5.0 (65)</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Serengeti & Masai Mara Big 5</h3>
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px; flex: 1;">Luxury tented camps, private 4x4 game drives, and the great wildebeest migration.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--muted-text); display: block;">Starting from</span>
+                  <strong style="font-size: 1.15rem; color: var(--coral-accent);">$3,100</strong> <span style="font-size: 0.78rem; color: var(--muted-text);">/ person</span>
+                </div>
+                <a href="booking.html?package=safari-kenya" class="btn btn-primary btn-sm">Book Escape</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div style="background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+            <div style="position: relative;">
+              <img src="assets/images/dest-dubai.webp" alt="Dubai Luxury" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+              <button style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #F87171; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" title="Remove from wishlist">♥</button>
+            </div>
+            <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 0.8rem; color: var(--muted-text); text-transform: uppercase;">Dubai, UAE</span>
+                <span style="color: #F59E0B; font-weight: 700; font-size: 0.88rem;">★ 4.8 (112)</span>
+              </div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 6px;">Dubai Ultra-Luxury & Dune Safari</h3>
+              <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px; flex: 1;">Burj Khalifa lounge, private desert dune dinner, and marina yacht sunset tour.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 14px;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--muted-text); display: block;">Starting from</span>
+                  <strong style="font-size: 1.15rem; color: var(--coral-accent);">$1,250</strong> <span style="font-size: 0.78rem; color: var(--muted-text);">/ person</span>
+                </div>
+                <a href="booking.html?dest=dubai" class="btn btn-primary btn-sm">Book Escape</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+

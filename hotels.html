@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover handpicked luxury hotels, boutique lodges, overwater bungalows, and 5-star resorts worldwide with Wanderlust.">
+  <title>Luxury Hotels & Resorts | Wanderlust Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Stackly Travel Home"><img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="144" height="57"></a>
+
+            <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="tour-details.html" class="nav-link">Tours</a>
+        <a href="hotels.html" class="nav-link active">Hotels</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="user-dashboard.html#wishlist" class="nav-action-btn" title="Saved Trips" aria-label="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span class="nav-action-badge nav-wishlist-count" style="display: none;">0</span>
+        </a>
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Plan Your Trip</a>
+        <button class="hamburger-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+    <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-top">
+      <div class="mobile-drawer-header">
+        <a href="index.html" class="logo" aria-label="Stackly Travel Home">
+          <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="130" height="51">
+        </a>
+        <button class="mobile-drawer-close" aria-label="Close navigation drawer" type="button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home <span>→</span></a>
+        <a href="about.html">About Us <span>→</span></a>
+        <a href="destinations.html">Destinations <span>→</span></a>
+        <a href="packages.html">Packages <span>→</span></a>
+        <a href="tour-details.html">Tours <span>→</span></a>
+        <a href="hotels.html" class="active">Hotels <span>→</span></a>
+        <a href="contact.html">Contact <span>→</span></a>
+        <a href="user-dashboard.html">Customer Dashboard <span>→</span></a>
+        <a href="admin-dashboard.html">Agency Admin <span>→</span></a>
+      </nav>
+    </div>
+        <div class="mobile-nav-footer">
+      <a href="login.html" class="btn btn-outline" style="width: 100%;">Account Login</a>
+      <a href="booking.html" class="btn btn-primary" style="width: 100%;">Plan Your Trip</a>
+      
+      <!-- Quick Mobile Drawer Contact Info -->
+      <div class="mobile-drawer-contact-info">
+        <a href="tel:+18007822559" class="mobile-contact-item">
+          <span>📞</span> <span>+1 (800) 782-2559 <strong>(24/7 VIP)</strong></span>
+        </a>
+        <a href="mailto:concierge@stacklytravel.com" class="mobile-contact-item">
+          <span>✉️</span> <span>concierge@stacklytravel.com</span>
+        </a>
+        <div class="mobile-contact-item">
+          <span>📍</span> <span>Stackly HQ, 120 Travel Way, NYC</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Hotels & Resorts</span>
+      </div>
+      <h1>Luxury Accommodations</h1>
+      <p class="text-muted" style="max-width: 600px; margin-top: 6px;">Handpicked 5-star villas, secluded atoll bungalows, and boutique hotels vetted for comfort, aesthetics, and world-class service.</p>
+    </div>
+  </section>
+
+  <!-- Hotels Filter and Grid -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      
+      <!-- Filter Bar -->
+      <div class="filter-bar-card">
+        <div class="filter-grid">
+          <div class="filter-search-box">
+            <svg class="filter-search-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"/></svg>
+            <input type="text" class="filter-search-input" placeholder="Search hotel name or city...">
+          </div>
+
+          <!-- Region Filter -->
+          <div>
+            <select class="filter-select filter-region-select">
+              <option value="all">All Locations</option>
+              <option value="bali">Bali, Indonesia</option>
+              <option value="maldives">Maldives</option>
+              <option value="paris">Paris, France</option>
+              <option value="switzerland">Switzerland</option>
+              <option value="dubai">Dubai, UAE</option>
+            </select>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div>
+            <select class="filter-select filter-price-select">
+              <option value="all">Any Price / Night</option>
+              <option value="under-1000">Under $400 / night</option>
+              <option value="1000-2000">$400 - $800 / night</option>
+              <option value="over-2000">$800+ / night</option>
+            </select>
+          </div>
+
+          <!-- Rating Filter -->
+          <div>
+            <select class="filter-select filter-rating-select">
+              <option value="all">All Ratings</option>
+              <option value="4.8">4.8+ Stars</option>
+              <option value="4.9">4.9+ Stars</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-outline btn-sm filter-clear-btn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Hotels Grid -->
+      <div class="hotels-grid" id="hotels-list">
+        
+        <!-- Hotel 1 -->
+        <div class="hotel-card" data-filterable-item data-name="The Cliff Haven Sanctuary" data-country="Indonesia" data-region="bali" data-price="420" data-rating="4.9">
+          <div class="hotel-img-wrap">
+            <img src="assets/images/hotel-1.webp" alt="The Cliff Haven Sanctuary Resort" loading="lazy" width="800" height="550">
+            <span class="badge badge-coral" style="position:absolute; top:12px; left:12px;">Oceanfront</span>
+          </div>
+          <div class="hotel-body">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px;">
+              <span class="dest-location">Uluwatu, Bali</span>
+              <span class="rating-badge">★ 4.9 (180)</span>
+            </div>
+            <h3 class="dest-title">The Cliff Haven Sanctuary</h3>
+            <p class="dest-desc">Perched along limestone cliffs with private infinity plunge pools and panoramic sunsets.</p>
+            <div class="hotel-amenities-row">
+              <span class="badge badge-blue">🏊 Infinity Pool</span>
+              <span class="badge badge-blue">💆 Luxury Spa</span>
+              <span class="badge badge-blue">🍳 Free Breakfast</span>
+              <span class="badge badge-blue">📶 Fiber WiFi</span>
+            </div>
+            <div class="dest-footer" style="margin-top: auto;">
+              <div>
+                <span class="dest-price-label">From / Night</span>
+                <span class="dest-price">$420</span>
+              </div>
+              <a href="booking.html?hotel=cliff-haven&destination=Bali" class="btn btn-primary btn-sm">Book Room</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="hotel-card" data-filterable-item data-name="Azure Lagoon Overwater Villas" data-country="Maldives" data-region="maldives" data-price="950" data-rating="5.0">
+          <div class="hotel-img-wrap">
+            <img src="assets/images/hotel-2.webp" alt="Azure Lagoon Overwater Villas" loading="lazy" width="800" height="550">
+            <span class="badge badge-green" style="position:absolute; top:12px; left:12px;">Private Atoll</span>
+          </div>
+          <div class="hotel-body">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px;">
+              <span class="dest-location">North Malé Atoll, Maldives</span>
+              <span class="rating-badge">★ 5.0 (310)</span>
+            </div>
+            <h3 class="dest-title">Azure Lagoon Overwater Villas</h3>
+            <p class="dest-desc">Stilts over crystalline turquoise waters with glass bottom floors and direct reef access.</p>
+            <div class="hotel-amenities-row">
+              <span class="badge badge-blue">🤿 Private Lagoon</span>
+              <span class="badge badge-blue">🚤 Seaplane Pier</span>
+              <span class="badge badge-blue">🍽 All-Inclusive</span>
+            </div>
+            <div class="dest-footer" style="margin-top: auto;">
+              <div>
+                <span class="dest-price-label">From / Night</span>
+                <span class="dest-price">$950</span>
+              </div>
+              <a href="booking.html?hotel=azure-lagoon&destination=Maldives" class="btn btn-primary btn-sm">Book Room</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="hotel-card" data-filterable-item data-name="Hôtel de L'Étoile Boutique" data-country="France" data-region="paris" data-price="580" data-rating="4.8">
+          <div class="hotel-img-wrap">
+            <img src="assets/images/hotel-3.webp" alt="Hôtel de L'Étoile Boutique" loading="lazy" width="800" height="550">
+          </div>
+          <div class="hotel-body">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px;">
+              <span class="dest-location">8th Arrondissement, Paris</span>
+              <span class="rating-badge">★ 4.8 (145)</span>
+            </div>
+            <h3 class="dest-title">Hôtel de L'Étoile Boutique</h3>
+            <p class="dest-desc">Haussmannian historic elegance steps from the Champs-Élysées with wrought iron balconies.</p>
+            <div class="hotel-amenities-row">
+              <span class="badge badge-blue">🥐 Parisian Bakery</span>
+              <span class="badge badge-blue">🍷 Wine Cellar</span>
+              <span class="badge badge-blue">🛎 Concierge</span>
+            </div>
+            <div class="dest-footer" style="margin-top: auto;">
+              <div>
+                <span class="dest-price-label">From / Night</span>
+                <span class="dest-price">$580</span>
+              </div>
+              <a href="booking.html?hotel=etoile-paris&destination=Paris" class="btn btn-primary btn-sm">Book Room</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 4 -->
+        <div class="hotel-card" data-filterable-item data-name="Alpine Grand Peak Lodge" data-country="Switzerland" data-region="switzerland" data-price="690" data-rating="4.9">
+          <div class="hotel-img-wrap">
+            <img src="assets/images/hotel-4.webp" alt="Alpine Grand Peak Lodge" loading="lazy" width="800" height="550">
+          </div>
+          <div class="hotel-body">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px;">
+              <span class="dest-location">Zermatt, Switzerland</span>
+              <span class="rating-badge">★ 4.9 (260)</span>
+            </div>
+            <h3 class="dest-title">Alpine Grand Peak Lodge</h3>
+            <p class="dest-desc">Timber chalets facing the Matterhorn with outdoor heated pools and cedarwood saunas.</p>
+            <div class="hotel-amenities-row">
+              <span class="badge badge-blue">🎿 Ski-In / Ski-Out</span>
+              <span class="badge badge-blue">♨️ Heated Alpine Spa</span>
+              <span class="badge badge-blue">🔥 Fireplace Suites</span>
+            </div>
+            <div class="dest-footer" style="margin-top: auto;">
+              <div>
+                <span class="dest-price-label">From / Night</span>
+                <span class="dest-price">$690</span>
+              </div>
+              <a href="booking.html?hotel=alpine-grand&destination=Switzerland" class="btn btn-primary btn-sm">Book Room</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 5 -->
+        <div class="hotel-card" data-filterable-item data-name="The Royal Palm Penthouse Suites" data-country="UAE" data-region="dubai" data-price="820" data-rating="4.9">
+          <div class="hotel-img-wrap">
+            <img src="assets/images/hotel-5.webp" alt="The Royal Palm Penthouse Suites" loading="lazy" width="800" height="550">
+          </div>
+          <div class="hotel-body">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px;">
+              <span class="dest-location">Palm Jumeirah, Dubai</span>
+              <span class="rating-badge">★ 4.9 (410)</span>
+            </div>
+            <h3 class="dest-title">The Royal Palm Penthouse Suites</h3>
+            <p class="dest-desc">5-star luxury with private beach, rooftop helipad, and Michelin-star dining.</p>
+            <div class="hotel-amenities-row">
+              <span class="badge badge-blue">🏖 Private Beach</span>
+              <span class="badge badge-blue">🍸 Rooftop Lounge</span>
+              <span class="badge badge-blue">🚗 Chauffeur Service</span>
+            </div>
+            <div class="dest-footer" style="margin-top: auto;">
+              <div>
+                <span class="dest-price-label">From / Night</span>
+                <span class="dest-price">$820</span>
+              </div>
+              <a href="booking.html?hotel=royal-palm&destination=Dubai" class="btn btn-primary btn-sm">Book Room</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 6 -->
+        <div class="hotel-card" data-filterable-item data-name="Viceroy Rainforest Eco-Estate" data-country="Indonesia" data-region="bali" data-price="390" data-rating="4.8">
+          <div class="hotel-img-wrap">
+            <img src="assets/images/hotel-6.webp" alt="Viceroy Rainforest Eco-Estate" loading="lazy" width="800" height="550">
+          </div>
+          <div class="hotel-body">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 6px;">
+              <span class="dest-location">Ubud, Bali</span>
+              <span class="rating-badge">★ 4.8 (290)</span>
+            </div>
+            <h3 class="dest-title">Viceroy Rainforest Eco-Estate</h3>
+            <p class="dest-desc">Nestled among sacred jungle valleys with natural stream views and holistic yoga pavilions.</p>
+            <div class="hotel-amenities-row">
+              <span class="badge badge-blue">🧘 Yoga Pavilion</span>
+              <span class="badge badge-blue">🌿 Organic Dining</span>
+              <span class="badge badge-blue">🏊 Private Pool</span>
+            </div>
+            <div class="dest-footer" style="margin-top: auto;">
+              <div>
+                <span class="dest-price-label">From / Night</span>
+                <span class="dest-price">$390</span>
+              </div>
+              <a href="booking.html?hotel=viceroy-bali&destination=Bali" class="btn btn-primary btn-sm">Book Room</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No Results State -->
+      <div class="no-results-state">
+        <div class="no-results-icon">🏨</div>
+        <h3>No Matching Hotels Found</h3>
+        <p class="text-muted" style="margin: 8px auto 20px;">Try adjusting your search criteria or resetting filters.</p>
+        <button type="button" class="btn btn-ocean filter-clear-btn">Reset All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- ==========================================================================
+       PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+    <!-- NEW SECTION A: STACKLY VIP HOTEL PRIVILEGES -->
+  <section class="section-spacing bg-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag tag-coral">Exclusive Benefits</span>
+        <h2>Stackly Elite Hotel Privileges</h2>
+        <p class="section-desc">Every hotel stay booked through Stackly includes complimentary VIP perks valued over $300 per stay.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); text-align: center;">
+          <span style="font-size: 2.2rem;">🏨</span>
+          <h4 style="margin: 10px 0 6px;">Free Room Upgrade</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Automatic priority upgrade to the next room category upon check-in based on availability.</p>
+        </div>
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); text-align: center;">
+          <span style="font-size: 2.2rem;">💳</span>
+          <h4 style="margin: 10px 0 6px;">$100 Resort Credit</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Complimentary hotel credit for specialty dining, spa treatments, or poolside cocktails.</p>
+        </div>
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); text-align: center;">
+          <span style="font-size: 2.2rem;">🍳</span>
+          <h4 style="margin: 10px 0 6px;">Daily Gourmet Breakfast</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Full daily international buffet or à la carte breakfast for up to two guests per room.</p>
+        </div>
+        <div style="background: var(--sand-warm); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); text-align: center;">
+          <span style="font-size: 2.2rem;">⏱</span>
+          <h4 style="margin: 10px 0 6px;">Flexible Check-in / Out</h4>
+          <p class="text-muted" style="font-size: 0.88rem;">Early 12:00 PM check-in and late 4:00 PM check-out privileges so you never rush.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION B: ECO-RESORT GUARANTEE -->
+  <section class="section-spacing bg-sand">
+    <div class="container">
+      <div style="background: var(--white); border-radius: var(--radius-xl); padding: 36px; border: 1px solid var(--border-color); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+        <div>
+          <span class="section-tag tag-green">Green Certified</span>
+          <h3>Sustainable Stays & Eco-Sanctuaries</h3>
+          <p class="text-muted" style="margin-top: 10px; line-height: 1.65;">
+            Our partner hotel collection is audited for sustainable water conservation, solar power integration, zero single-use plastics, and local sourcing of organic farm-to-table produce.
+          </p>
+        </div>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <div style="background: var(--sand-warm); padding: 14px 20px; border-radius: var(--radius-md); font-weight: 600; color: var(--ocean-dark);">☀️ 100% Solar-Powered Villas</div>
+          <div style="background: var(--sand-warm); padding: 14px 20px; border-radius: var(--radius-md); font-weight: 600; color: var(--ocean-dark);">🌱 Zero Plastic Footprint</div>
+          <div style="background: var(--sand-warm); padding: 14px 20px; border-radius: var(--radius-md); font-weight: 600; color: var(--ocean-dark);">🥗 Organic Garden Dining</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pre-footer-cta">
+    <div class="container">
+      <h2>Join thousands of proactive travelers and families discovering the world with clean, modern travel clarity.</h2>
+      <div class="pre-footer-buttons">
+        <a href="destinations.html" class="btn-pill-mint">Start Exploring Free</a>
+        <a href="booking.html" class="btn-pill-dark">Create a Custom Trip</a>
+        <a href="packages.html" class="btn-pill-dark">View Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STACKLY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px;" aria-label="Stackly Travel Home">
+            <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="144" height="57">
+          </a>
+          <p>Mobilizing intelligent travel discovery, curated destination escapes, bespoke luxury packages, and personalized trip planning for modern life.</p>
+                    <div class="footer-social-row">
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="LinkedIn">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="X / Twitter">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Stackly</a>
+            <a href="destinations.html">Destinations Catalog</a>
+            <a href="packages.html">Travel Packages</a>
+            <a href="hotels.html">Hotels & Resorts</a>
+            <a href="tour-details.html">Tour Details</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact Coordinates</a>
+            <a href="404.html">Terms & Agreements</a>
+            <a href="404.html">Security & Insurance</a>
+            <a href="destination-details.html">Destination Guides</a>
+            <a href="contact.html#faq">FAQ & Help Center</a>
+            <a href="user-dashboard.html">User Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p class="footer-newsletter-desc">Get quarterly travel updates, smart expedition alerts, and curated destination reports.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Travel updates!'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Your Email" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 Stackly. All rights reserved. Designed for travel clarity and unforgettable global journeys.</p>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

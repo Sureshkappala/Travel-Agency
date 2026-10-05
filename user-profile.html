@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Traveler Profile & Preferences - Stackly Travel Customer Hub. Manage personal traveler information, passport details, and dining preferences.">
+  <title>Traveler Profile | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--sand-warm);">
+
+  <div class="dashboard-layout">
+    
+    <!-- Mobile Sidebar Overlay -->
+    <div class="mobile-drawer-overlay dashboard-overlay"></div>
+
+    <!-- Dashboard Sidebar -->
+    <aside class="dashboard-sidebar" aria-label="User Navigation Sidebar">
+      <div class="sidebar-header">
+        <a href="user-dashboard.html" class="sidebar-brand">
+          <img src="assets/images/logo-white.webp" alt="Stackly Travel Logo" width="130" height="50">
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close sidebar" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      <!-- User Profile Badge with Online Dot -->
+      <div class="sidebar-user-card">
+        <div class="sidebar-user-avatar">
+          KS
+          <span class="online-status-dot"></span>
+        </div>
+        <div class="sidebar-user-info">
+          <strong class="sidebar-user-name">Kappalasuresh92</strong>
+          <span class="sidebar-user-role">Explorer Traveler • Stackly</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="user-dashboard.html" class="sidebar-link">
+          <span>📊</span> Overview Dashboard
+        </a>
+        <a href="user-trips.html" class="sidebar-link">
+          <span>✈️</span> My Upcoming Trips
+        </a>
+        <a href="user-bookings.html" class="sidebar-link">
+          <span>📑</span> All Bookings
+        </a>
+        <a href="user-wishlist.html" class="sidebar-link">
+          <span>♥</span> Saved Destinations
+        </a>
+        <a href="user-documents.html" class="sidebar-link">
+          <span>📄</span> Travel Documents
+        </a>
+        <a href="user-notifications.html" class="sidebar-link">
+          <span>🔔</span> Notifications <span class="badge badge-coral" style="padding: 2px 6px; font-size: 0.7rem; margin-left: auto;">2</span>
+        </a>
+        <a href="user-profile.html" class="sidebar-link active">
+          <span>👤</span> Traveler Profile
+        </a>
+        <a href="user-settings.html" class="sidebar-link">
+          <span>⚙️</span> Account Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link" style="color: #F87171;">
+          <span>🚪</span> Sign Out
+        </a>
+      </div>
+    
+
+    <!-- Dashboard Main Content Area -->
+    <div class="dashboard-main">
+      
+      <!-- Topbar Header -->
+      <header class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="dashboard-drawer-btn" aria-label="Open sidebar menu" type="button">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div>
+            <h2 style="font-size: 1.25rem; color: var(--ocean-dark); margin: 0;">Traveler Profile & Preferences</h2>
+            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">Tailor your concierge services, hotel check-ins, and airline seating.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="btn btn-primary btn-sm" onclick="window.location.href='404.html'">Save Profile</button>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/images/avatar-1.webp" alt="Eleanor Vance" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coral-accent);">
+            <div style="display: flex; flex-direction: column;" class="hide-mobile">
+              <strong style="font-size: 0.9rem; color: var(--ocean-dark);">Eleanor Vance</strong>
+              <span style="font-size: 0.75rem; color: var(--muted-text);">Explorer Tier Member</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Body -->
+      <main class="dashboard-body">
+        
+        <!-- Profile Banner -->
+        <div class="data-table-card" style="margin-bottom: 24px;">
+          <div style="padding: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div style="position: relative;">
+                <img src="assets/images/avatar-1.webp" alt="Eleanor Vance" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--coral-accent);">
+                <button style="position: absolute; bottom: 0; right: 0; background: var(--ocean-dark); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 0.8rem; cursor: pointer;" title="Change Photo" onclick="window.location.href='404.html'">📷</button>
+              </div>
+              <div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 4px; color: var(--ocean-dark);">Eleanor Vance</h3>
+                <p class="text-muted" style="font-size: 0.88rem; margin-bottom: 6px;">Explorer Tier Member • 4 Completed Trips</p>
+                <span class="badge badge-coral">Travel ID: STK-882910</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px;">
+              <a href="404.html" class="btn btn-outline btn-sm">Change Avatar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal & Passport Information Form -->
+        <div class="data-table-card" style="margin-bottom: 24px;">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.15rem; margin: 0;">Personal & Passport Information</h3>
+            <p class="text-muted" style="font-size: 0.82rem; margin-top: 4px;">Used for international flight manifest and luxury hotel registrations.</p>
+          </div>
+
+          <div style="padding: 24px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" value="Eleanor">
+              </div>
+
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" value="Vance">
+              </div>
+
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control" value="traveler@wanderlust.com">
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" value="+1 (555) 349-8201">
+              </div>
+
+              <div class="form-group">
+                <label>Passport Number</label>
+                <input type="text" class="form-control" value="P948201934">
+              </div>
+
+              <div class="form-group">
+                <label>Passport Expiration</label>
+                <input type="date" class="form-control" value="2031-08-14">
+              </div>
+
+              <div class="form-group">
+                <label>Nationality</label>
+                <input type="text" class="form-control" value="United States">
+              </div>
+
+              <div class="form-group">
+                <label>Emergency Contact</label>
+                <input type="text" class="form-control" value="Marcus Vance (+1 555-908-1122)">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel & Hospitality Preferences -->
+        <div class="data-table-card">
+          <div style="padding: 20px 24px; border-bottom: 1px solid var(--border-color);">
+            <h3 style="font-size: 1.15rem; margin: 0;">Hospitality & Flight Preferences</h3>
+            <p class="text-muted" style="font-size: 0.82rem; margin-top: 4px;">Auto-applied to all future resort reservations and airline itineraries.</p>
+          </div>
+
+          <div style="padding: 24px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              
+              <div class="form-group">
+                <label>Dietary Restrictions</label>
+                <select class="form-control">
+                  <option selected>Vegetarian / Pescatarian</option>
+                  <option>Vegan</option>
+                  <option>Gluten-Free</option>
+                  <option>Halal</option>
+                  <option>Kosher</option>
+                  <option>No Restrictions</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Preferred Airline Seating</label>
+                <select class="form-control">
+                  <option selected>Window Seat • Forward Cabin</option>
+                  <option>Aisle Seat • Extra Legroom</option>
+                  <option>Exit Row</option>
+                  <option>Bulkhead</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Hotel Room Preference</label>
+                <select class="form-control">
+                  <option selected>High Floor • King Bed • Ocean/Mountain View</option>
+                  <option>Quiet Room away from elevator</option>
+                  <option>Ground Floor • Easy Access</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Preferred Travel Pace</label>
+                <select class="form-control">
+                  <option selected>Balanced (Culture + Relaxation)</option>
+                  <option>High Adventure & Packed Days</option>
+                  <option>Slow & Leisure Focused</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
+              <button class="btn btn-primary" onclick="window.location.href='404.html'">Save All Profile Preferences</button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

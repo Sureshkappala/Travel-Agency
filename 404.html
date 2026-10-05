@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="404 Page Not Found - You've wandered into uncharted territory. Find your way back with Stackly Travel Agency.">
+  <title>404 — Lost In Transit | Stackly Travel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-standalone-page {
+      min-height: 100vh;
+      background: var(--sand-warm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+      box-sizing: border-box;
+    }
+
+    .error-standalone-card {
+      background: var(--white);
+      max-width: 680px;
+      width: 100%;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      padding: 40px 32px;
+      text-align: center;
+      box-sizing: border-box;
+      margin: auto;
+    }
+
+    .error-img-box {
+      max-width: 440px;
+      margin: 0 auto 20px;
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .error-img-box img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+    }
+
+    .error-coord-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(11, 37, 69, 0.85);
+      backdrop-filter: blur(8px);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .error-code-num {
+      font-size: clamp(3.2rem, 8vw, 4.5rem);
+      font-weight: 900;
+      color: var(--ocean-dark);
+      line-height: 1;
+      margin: 10px 0 6px;
+      letter-spacing: -0.03em;
+    }
+
+    .error-tag-pill {
+      display: inline-block;
+      background: var(--coral-light);
+      color: var(--coral-accent);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .error-headline {
+      font-size: clamp(1.4rem, 4vw, 1.95rem);
+      color: var(--ocean-dark);
+      margin: 0 0 12px;
+      line-height: 1.3;
+      font-weight: 800;
+    }
+
+    .error-description {
+      color: var(--muted-text);
+      font-size: clamp(0.88rem, 2.5vw, 1rem);
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0 auto 26px;
+    }
+
+    .error-buttons-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 480px) {
+      .error-standalone-page {
+        padding: 20px 12px;
+      }
+
+      .error-standalone-card {
+        padding: 28px 18px;
+      }
+
+      .error-buttons-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .error-buttons-row .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="error-standalone-page">
+    
+    <!-- Centered Brand Logo -->
+    <div style="margin-bottom: 22px;">
+      <a href="index.html" aria-label="Stackly Travel Home">
+        <img src="assets/images/logo.webp" alt="Stackly Travel Logo" width="150" height="59" style="display: block; max-width: 150px; height: auto;">
+      </a>
+    </div>
+
+    <!-- Standalone 404 Card -->
+    <div class="error-standalone-card">
+      
+      <!-- 404 Visual with Coordinates Badge -->
+      <div class="error-img-box">
+        <img src="assets/images/404-travel.webp" alt="Traveler lost exploring map and mountains" width="800" height="500">
+        <div class="error-coord-badge">🧭 Coordinates Off Route</div>
+      </div>
+
+      <!-- 404 Big Number & Tag -->
+      <div class="error-code-num">404</div>
+      <div class="error-tag-pill">LOST IN TRANSIT</div>
+
+      <!-- Heading & Text -->
+      <h1 class="error-headline">Looks like you've wandered into uncharted waters.</h1>
+      <p class="error-description">
+        The destination or page coordinates you entered don’t match any known routes on our maps. Don't worry—every missed turn is simply the beginning of an unexpected expedition.
+      </p>
+
+      <!-- Go Back and Back to Home Action Buttons -->
+      <div class="error-buttons-row">
+        <button onclick="window.history.length > 1 ? window.history.back() : window.location.href='index.html'" class="btn btn-outline btn-lg" type="button" style="display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Go Back
+        </button>
+
+        <a href="index.html" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Back to Home
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Subtle Footer Note -->
+    <div style="margin-top: 20px; font-size: 0.8rem; color: var(--muted-text); text-align: center;">
+      © 2026 Stackly Travel Group • Need assistance? <a href="contact.html" style="color: var(--coral-accent); text-decoration: underline;">Contact Support</a>
+    </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
