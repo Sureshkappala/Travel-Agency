@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAuthValidation();
   initWishlist();
   initDashboardCharts();
+  initScrollRevealAnimations();
 });
 
 /* ==========================================================================
@@ -1095,3 +1096,37 @@ window.addEventListener('resize', () => {
     initDashboardCharts();
   }, 150);
 });
+
+/* ==========================================================================
+   14. SCROLL-DRIVEN REVEAL ANIMATIONS
+   ========================================================================== */
+function initScrollRevealAnimations() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll(
+    '.dest-card, .pkg-card, .hotel-card, .stat-card, .section-header, .feature-card, .team-card, .testimonial-card, .data-table-card, .faq-item, .info-card-item, .about-story-grid > div, .review-card, .billing-card'
+  );
+
+  if (!targets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach((el, index) => {
+    el.classList.add('reveal-fade-up');
+    el.style.transitionDelay = `${(index % 4) * 80}ms`;
+    observer.observe(el);
+  });
+}
+
