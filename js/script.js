@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWishlist();
   initDashboardCharts();
   initScrollRevealAnimations();
+  initUserSession();
 });
 
 /* ==========================================================================
@@ -1130,3 +1131,68 @@ function initScrollRevealAnimations() {
   });
 }
 
+
+
+/* ==========================================================================
+   15. DYNAMIC USER SESSION & CREDENTIALS SYNC
+   ========================================================================== */
+function initUserSession() {
+  let user = null;
+  try {
+    const raw = localStorage.getItem('stackly_user');
+    if (raw) user = JSON.parse(raw);
+  } catch (e) {
+    user = null;
+  }
+
+  // If no user saved, set default profile
+  if (!user || !user.name) {
+    user = {
+      name: 'Suresh Kappala',
+      email: 'suresh.kappala@gmail.com',
+      role: 'Explorer Traveler • Stackly'
+    };
+  }
+
+  // Update sidebar user names
+  document.querySelectorAll('.sidebar-user-name').forEach(el => {
+    el.textContent = user.name;
+  });
+
+  // Update sidebar initials avatar
+  const initials = user.name
+    .split(' ')
+    .filter(Boolean)
+    .map(n => n[0])
+    .join('')
+    .substring(0, 2)
+    .toUpperCase() || 'SK';
+
+  document.querySelectorAll('.sidebar-user-avatar').forEach(el => {
+    el.innerHTML = `${initials} <span class="online-status-dot"></span>`;
+  });
+
+  // Update dashboard topbar welcome headers
+  document.querySelectorAll('.dashboard-topbar h2').forEach(el => {
+    if (el.textContent.toLowerCase().includes('welcome')) {
+      el.textContent = `Welcome Back, ${user.name}! 👏`;
+    }
+  });
+
+  // Update welcome credentials banner h2 & details
+  document.querySelectorAll('.welcome-credentials-banner h2').forEach(el => {
+    el.textContent = `Welcome back, ${user.name} 👏`;
+  });
+
+  document.querySelectorAll('.cred-pill').forEach(pill => {
+    if (pill.innerHTML.includes('Name:')) {
+      pill.innerHTML = `<span>👤</span> Name: <strong>${user.name}</strong>`;
+    }
+    if (pill.innerHTML.includes('Email:') && user.email) {
+      pill.innerHTML = `<span>✉️</span> Email: <strong>${user.email}</strong>`;
+    }
+    if (pill.innerHTML.includes('Role:') && user.role) {
+      pill.innerHTML = `<span>🛡️</span> Role: <strong>${user.role}</strong>`;
+    }
+  });
+}

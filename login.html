@@ -70,7 +70,7 @@
         <!-- Email Field -->
         <div class="form-group login-email-group">
           <label for="login-email">Email Address *</label>
-          <input type="email" id="login-email" class="form-control" placeholder="traveler@wanderlust.com" value="traveler@wanderlust.com" required>
+          <input type="email" id="login-email" class="form-control" placeholder="e.g. name@example.com" autocomplete="email" required>
           <span class="form-error">Please enter a valid email address.</span>
         </div>
 
@@ -78,7 +78,7 @@
         <div class="form-group login-pass-group">
           <label for="login-pass">Password *</label>
           <div class="password-input-wrap">
-            <input type="password" id="login-pass" class="form-control" placeholder="Enter your password" value="Travel2026!" required>
+            <input type="password" id="login-pass" class="form-control" placeholder="Enter your account password" autocomplete="current-password" required>
             <span class="password-toggle-btn" title="Toggle password visibility">
               <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
             </span>
@@ -89,7 +89,7 @@
         <!-- Remember Me Checkbox & Forgot Password Downside -->
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; flex-wrap: wrap; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="checkbox" id="remember-me" checked style="accent-color: var(--coral-accent); width: 16px; height: 16px; cursor: pointer;">
+            <input type="checkbox" id="remember-me" style="accent-color: var(--coral-accent); width: 16px; height: 16px; cursor: pointer;">
             <label for="remember-me" style="font-size: 0.88rem; color: var(--body-text); cursor: pointer; margin-bottom: 0;">Remember me</label>
           </div>
           <a href="404.html" style="font-size: 0.85rem; color: var(--coral-accent); font-weight: 600;">Forgot Password?</a>
@@ -103,7 +103,7 @@
         </div>
 
         <div id="login-hint-box" style="margin-top: 18px; padding: 12px; background: var(--sand-warm); border-radius: var(--radius-sm); font-size: 0.8rem; text-align: center; color: var(--muted-text); border: 1px dashed var(--border-color);">
-          💡 <strong>Traveler Demo:</strong> Submitting will sign you directly into the <strong>Customer Travel Dashboard</strong>.
+          🔒 Secure authentication for your personalized travel workspace.
         </div>
 
       </form>
