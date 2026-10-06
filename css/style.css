@@ -2304,11 +2304,13 @@ h6 { font-size: 0.95rem; }
    ========================================================================== */
 .dashboard-layout {
   display: flex;
+  width: 100%;
   min-height: 100vh;
   background: var(--sand-warm);
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Dashboard Sidebar */
 .dashboard-sidebar {
   width: 270px;
   background: var(--ocean-dark);
@@ -2777,27 +2779,25 @@ h6 { font-size: 0.95rem; }
 }
 
 /* ==========================================================================
-   INTERACTIVE MAP SECTION (STACKLY HEADQUARTERS)
+   INTERACTIVE MAP SECTION (STACKLY HEADQUARTERS - SIDE-BY-SIDE NO OVERLAP)
    ========================================================================== */
-.map-embed-container {
-  position: relative;
+.map-layout-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.map-iframe-card {
   border-radius: var(--radius-xl);
   overflow: hidden;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
   background: var(--white);
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  align-items: stretch;
-}
-
-.map-iframe-wrap {
-  width: 100%;
   min-height: 440px;
-  position: relative;
 }
 
-.map-iframe-wrap iframe {
+.map-iframe-card iframe {
   width: 100%;
   height: 100%;
   min-height: 440px;
@@ -2805,37 +2805,30 @@ h6 { font-size: 0.95rem; }
   display: block;
 }
 
-.map-info-floating-card {
-  position: relative;
-  top: auto;
-  left: auto;
-  max-width: 100%;
+.map-details-card {
   background: var(--white);
-  border-radius: 0;
-  padding: 32px;
-  box-shadow: none;
-  border: none;
-  border-left: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 2;
 }
 
 @media (max-width: 992px) {
-  .map-embed-container {
+  .map-layout-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .map-info-floating-card {
-    border-left: none;
-    border-top: 1px solid var(--border-color);
+  .map-iframe-card {
+    min-height: 320px;
+  }
+  .map-iframe-card iframe {
+    min-height: 320px;
+  }
+  .map-details-card {
     padding: 24px;
-  }
-  .map-iframe-wrap {
-    min-height: 300px;
-  }
-  .map-iframe-wrap iframe {
-    min-height: 300px;
   }
 }
 

@@ -352,6 +352,9 @@ function initFAQAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
   if (faqItems.length === 0) return;
 
+  // Guarantee all items start closed by default
+  faqItems.forEach(item => item.classList.remove('open'));
+
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
     if (!question) return;
@@ -377,6 +380,9 @@ function initFAQAccordion() {
 function initItineraryAccordion() {
   const itineraryItems = document.querySelectorAll('.itinerary-item');
   if (itineraryItems.length === 0) return;
+
+  // Guarantee all itinerary items start closed by default
+  itineraryItems.forEach(item => item.classList.remove('open'));
 
   itineraryItems.forEach(item => {
     const header = item.querySelector('.itinerary-header');
