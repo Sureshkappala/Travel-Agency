@@ -1178,13 +1178,6 @@ function initUserSession() {
     el.innerHTML = `${initials} <span class="online-status-dot"></span>`;
   });
 
-  // Update dashboard topbar welcome headers
-  document.querySelectorAll('.dashboard-topbar h2').forEach(el => {
-    if (el.textContent.toLowerCase().includes('welcome')) {
-      el.textContent = `Welcome Back, ${user.name}! 👏`;
-    }
-  });
-
   // Update welcome credentials banner h2 & details
   document.querySelectorAll('.welcome-credentials-banner h2').forEach(el => {
     el.textContent = `Welcome back, ${user.name} 👏`;
