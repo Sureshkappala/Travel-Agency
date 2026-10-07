@@ -3073,7 +3073,7 @@ h6 { font-size: 0.95rem; }
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1.2fr 1fr 1.2fr;
+  grid-template-columns: 1.3fr 1fr 1.3fr 1.2fr;
   gap: 36px;
   padding-bottom: 45px;
 }
